@@ -1,11 +1,15 @@
 //import MyComponent from"./Learn.jsx"
 //import WeatherApp from "./Learn2.jsx";
 import FinanceTracker from "./FinanceTracker";
-
+import React,{useState} from "react";
 function App() {
+  const [isDark,setIsDark] = useState(false);
+  function handleDarkMode(){
+    setIsDark(prev=>!prev);
+  }
   return(
     <>
-      <FinanceTracker/>
+      <FinanceTracker isDark = {isDark} onToggleTheme = {handleDarkMode}/>
       {/*<WeatherApp/>*/}
     </>
   );
