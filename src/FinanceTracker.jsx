@@ -1,6 +1,6 @@
 import { Handler } from "leaflet";
 import React,{useState,useEffect, useRef,} from "react";
-
+import MyCharts from "./charts";
 function FinanceTracker({isDark,onToggleTheme}){
     //USE STATES
     const [searchDisplayed,setSearchDisplayed] = useState(false);
@@ -13,9 +13,7 @@ function FinanceTracker({isDark,onToggleTheme}){
             expenses: [{col1: "", col2: "", col3: ""}],
             savings:  [{col1: "", col2: "", col3: ""}],
             //overflow: {col1: "", col2: "", col3: ""},
-
     });
-    
     const [delayBudget,setBudgetDelay] = useState({
             incomeColumn2:0,
             billColumn2:0,
@@ -34,10 +32,6 @@ function FinanceTracker({isDark,onToggleTheme}){
     const cartRef = useRef(null);
     const monthSelect = useRef(null);
     
-    
-
-
-    
     //USE EFFECT
     useEffect(()=>{
         function hideDisplay(event){
@@ -53,8 +47,6 @@ function FinanceTracker({isDark,onToggleTheme}){
             document.removeEventListener("mousedown",hideDisplay);
         };
     },[]);
-    
-    
 
     const getColumnSum = (tableName,colKey)=>{
         const rows = allRows[tableName] || [];
@@ -146,9 +138,6 @@ function FinanceTracker({isDark,onToggleTheme}){
         )
     }
     
-    
-
-
     //OTHER VARIABLES
     const months =[
         "January", "February", "March", "April", "May", "June",
@@ -182,7 +171,6 @@ function FinanceTracker({isDark,onToggleTheme}){
             </div>
             )}
             
-            
             <img className="cart" src="../src/assets/shopping-cart (1).png" alt="shopping cart icon" onClick={handleCartDisplay} />
             {cartDisplayed &&(
                 <div className={`cartDisplay `} ref={cartRef}>
@@ -194,7 +182,9 @@ function FinanceTracker({isDark,onToggleTheme}){
             )}
             
         </header>
+
         <hr />
+
         <section className="text">
             <h2 className={`slogan ${isDark && "dark"}`}>Keep your money on a short leash</h2>
             <p className={`sloganText ${isDark && "dark"}`}>Track every coin. Grow every goal</p>
@@ -221,7 +211,12 @@ function FinanceTracker({isDark,onToggleTheme}){
                     <tr>
                         <td className="subHeading">Choose a Month</td>
                         <td>
-                            <select className="monthSelect" name="months" id="months" ref={monthSelect} onChange={handleMonthSelect}>
+                            <select 
+                                className="monthSelect" 
+                                name="months" 
+                                id="months" 
+                                ref={monthSelect} 
+                                onChange={handleMonthSelect}>
                                 <option value="">Select a month</option>
                                 {
                                     months.map((month,i)=>(
@@ -327,7 +322,6 @@ function FinanceTracker({isDark,onToggleTheme}){
                         </td>
                     </tr>
                     ))}
-
                 </tbody>
             </table>
             <table className="bills" border="1">
@@ -373,7 +367,6 @@ function FinanceTracker({isDark,onToggleTheme}){
                         </td>
                     </tr>
                     ))}
-                    
                 </tbody>
             </table>
             <table className="expenses" border="1">
@@ -419,7 +412,6 @@ function FinanceTracker({isDark,onToggleTheme}){
                         </td>
                     </tr>
                     ))}
-                    
                 </tbody>
             </table>
             <table className="savings" border="1">
@@ -469,19 +461,18 @@ function FinanceTracker({isDark,onToggleTheme}){
             </table>
             </div>
             <button className="saveButton" type="submit">Save</button>
-            <section className="myCharts">
-                <div className="remainder">
-                <h4>LEFT TO SPEND</h4>
-                </div>
-                <div className="comparison">
-                    <h4>BUDGET VS ACTUAL</h4>
-                </div>
-                <div className="analysis">
-                    <h4>FINANCIAL DISTRIBUTION</h4>
-                </div>
-            </section>
+            <MyCharts
+                incomeActual={incomeActual}
+                billsActual={billsActual}
+                expensesActual={expensesActual}
+                savingsActual={savingsActual}
+                incomeBudget={incomeBudget}
+                billsBudget={billsBudget}
+                expensesBudget={expensesBudget}
+                savingsBudget={savingsBudget}
+                incomeSpent={incomeSpent}
+            />
         </main>
-            
         </div>
     );
 }
