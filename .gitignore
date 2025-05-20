@@ -1,0 +1,10 @@
+*
+!.gitignore
+!src/
+!src/FinanceTracker.jsx
+!src/FinanceTracker.css
+!src/App.jsx
+!src/index.html
+!src/main.jsx
+!vite.config.js
+!package.json

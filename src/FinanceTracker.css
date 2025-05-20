@@ -1,0 +1,482 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow-x: hidden;
+}
+body .overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .currencyOptionsContainer {
+  position: relative;
+  padding: 2px;
+  border-radius: 4px;
+  color: #000;
+}
+header .currencyOptionsContainer .currencyOptions {
+  color: #000;
+  padding: 2px;
+}
+header .title {
+  text-align: center;
+  display: flex;
+  position: relative;
+  left: 8%;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .searchIcon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 15%;
+  transition: 0.2s ease;
+}
+header .searchIcon:hover {
+  transform: scale(1.1);
+}
+header .searchContainer {
+  position: absolute;
+  height: 10em;
+  width: 100%;
+  box-shadow: 4px 4px 8px gray;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdca77;
+  transition: display 1s ease;
+}
+header .searchContainer .searchInputIcon {
+  position: absolute;
+  top: 51%;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  z-index: 3;
+  left: 11%;
+}
+header .searchContainer .searchInput {
+  height: 4em;
+  font-size: 1.2em;
+  position: absolute;
+  top: 3em;
+  outline: none;
+  border: none;
+  left: 10%;
+  border-radius: 12px;
+  width: 80%;
+  padding-left: 3em;
+}
+header .searchContainer .searchInput:focus {
+  outline: none;
+}
+header .searchContainer .searchInput::-moz-placeholder {
+  color: #c0bfbf;
+}
+header .searchContainer .searchInput::placeholder {
+  color: #c0bfbf;
+}
+header .searchContainer .searchInput::-webkit-search-cancel-button {
+  display: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+header .searchContainer .cancelInputIcon {
+  position: absolute;
+  position: absolute;
+  top: 51%;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  z-index: 3;
+  left: 85%;
+}
+header .cart {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: -1%;
+  transition: 0.2s ease;
+}
+header .cart:hover {
+  transform: scale(1.1);
+}
+header .cartDisplay {
+  height: 70em;
+  background: #fdca77;
+  border-radius: 0px 0px 0px 20px;
+  position: absolute;
+  float: right;
+  z-index: 4;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  left: 70%;
+  padding-left: 2em;
+  box-shadow: 8px 8px 16px gray;
+}
+header .cartDisplay h1 {
+  font-weight: 100;
+  font-size: 1.3rem;
+  margin-top: -2em;
+  color: rgb(156, 155, 155);
+}
+header .cartDisplay h2 {
+  position: relative;
+  top: 13%;
+  width: 200%;
+  left: -10%;
+  text-align: center;
+  color: rgb(156, 155, 155);
+}
+header .cartDisplay button {
+  position: absolute;
+  z-index: 4;
+  padding: 12px;
+  border-radius: 12px;
+  background: transparent;
+  margin-top: 23em;
+  border: 2px solid rgb(156, 155, 155);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(156, 155, 155);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+header .cartDisplay .cancelCartIcon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  margin-top: -3.5em;
+  left: 65%;
+}
+header .cartDisplay .cancelCartIcon::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 2em;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #FF6EB4, #F64A8A, #D72667);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.sloganText {
+  text-align: center;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #fb870b 0%, #ed960b 25%, #fb60ab 70%, #f8045d 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+main {
+  max-height: 100%;
+  margin-bottom: 2em;
+  border: 20px solid gainsboro;
+  border-radius: 12px;
+  max-width: 95%;
+  position: relative;
+  left: 1%;
+}
+main nav {
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  max-width: 90%;
+  margin-left: 6%;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
+  padding-left: 0.5em;
+  background: #F64A8A;
+  border-radius: 5px;
+  min-height: 4em;
+  display: grid;
+  grid-template-columns: repeat(7, 13%);
+}
+main nav .budgeted {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 13em;
+}
+main nav .leftToBudget {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 23.6rem;
+}
+main nav .incomeSpent {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 37.5em;
+}
+main nav .myProgress {
+  padding: 12px;
+  height: 20px;
+  background-color: #F7E7CE;
+  border-radius: 5px;
+  margin-left: -2em;
+}
+main nav .incomeSaved {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 74%;
+}
+main nav .incomeLeftover {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 88%;
+}
+main .myTables {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin-right: 0.3em;
+}
+main .myTables .overview {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .overview thead {
+  background: #fdca77;
+}
+main .myTables .overview thead tr {
+  text-align: center;
+}
+main .myTables .overview thead tr th {
+  border: 1px solid #ddd;
+  padding: 5px 6px;
+  text-align: center;
+  vertical-align: middle;
+  height: 2em;
+  text-align: center;
+  position: relative;
+}
+main .myTables .overview tbody .subHeading {
+  background: #f8d7a3;
+}
+main .myTables .overview tbody td {
+  border: 1px solid #ddd;
+  padding: 5px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+main .myTables .overview tbody .monthSelect {
+  padding: 2px;
+  border: none;
+  padding-left: 2em;
+  color: black;
+  outline: none;
+  text-align: center;
+  background: transparent;
+}
+main .myTables .overview tbody .chooseYear {
+  padding: 2px;
+  border: none;
+  padding-left: 2em;
+  color: black;
+  outline: none;
+  text-align: center;
+  background: transparent;
+}
+main .myTables .overview tbody .startingDay {
+  border: none;
+  outline: none;
+  text-align: center;
+}
+main .myTables .overview tbody .startingDay:focus {
+  outline: none;
+}
+main .myTables .overflow {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .overflow thead {
+  text-align: center;
+  background: #fdca77;
+}
+main .myTables .overflow thead th {
+  height: 2em;
+}
+main .myTables .overflow thead td {
+  width: auto;
+  background: #f8d7a3;
+  text-align: center;
+}
+main .myTables .income {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .income thead {
+  text-align: center;
+  background: #fdca77;
+}
+main .myTables .income thead th {
+  height: 2em;
+}
+main .myTables .income thead td {
+  width: auto;
+  background: #f8d7a3;
+  text-align: center;
+}
+main .myTables .bills {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .bills thead {
+  text-align: center;
+  background: #fdca77;
+}
+main .myTables .bills thead th {
+  height: 2em;
+}
+main .myTables .bills thead td {
+  width: auto;
+  background: #f8d7a3;
+  text-align: center;
+}
+main .myTables .expenses {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .expenses thead {
+  text-align: center;
+  background: #fdca77;
+}
+main .myTables .expenses thead th {
+  height: 2em;
+}
+main .myTables .expenses thead td {
+  width: auto;
+  background: #f8d7a3;
+  text-align: center;
+}
+main .myTables .savings {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .savings thead {
+  text-align: center;
+  background: #fdca77;
+}
+main .myTables .savings thead th {
+  height: 2em;
+}
+main .myTables .savings thead td {
+  width: auto;
+  background: #f8d7a3;
+  text-align: center;
+}
+main .myTables .debt {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .debt thead {
+  text-align: center;
+  background: #fdca77;
+}
+main .myTables .debt thead th {
+  height: 2em;
+}
+main .myTables .debt thead td {
+  width: auto;
+  background: #f8d7a3;
+  text-align: center;
+}
+main .saveButton {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  position: relative;
+  left: 40%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: 0.5s ease;
+}
+main .saveButton:hover {
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 10px;
+  transform: translateY(-10px) translateX(-10px);
+}
+main .myCharts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin-right: 0.3em;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+main .myCharts .remainder {
+  height: 15em;
+}
+main .myCharts .comparison {
+  height: 15em;
+}
+main .myCharts .analysis {
+  height: 15em;
+}/*# sourceMappingURL=FinanceTracker.css.map */
