@@ -1,7 +1,8 @@
-import { Handler } from "leaflet";
 import React,{useState,useEffect, useRef,} from "react";
 import MyCharts from "./charts";
 import MyTables from "./tables";
+import { db}  from "./firebase";
+import { collection, addDoc } from "firebase/firestore";
 function FinanceTracker({isDark,onToggleTheme}){
     //USE STATES
     const [searchDisplayed,setSearchDisplayed] = useState(false);
@@ -26,8 +27,7 @@ function FinanceTracker({isDark,onToggleTheme}){
             savingsColumn3:0,
             
     });
-    //const [isDark,setIsDark] = useState(false);
-    
+    const [savedStatus,setStatusSaved] = useState(false);    
     //USE REF
     const searchRef = useRef(null);
     const cartRef = useRef(null);
@@ -138,6 +138,21 @@ function FinanceTracker({isDark,onToggleTheme}){
             })
         )
     }
+    const handleDetailSave = async ()=>{
+        try{
+            await addDoc(collection(db,"userinputs"),{
+                allRows,
+                selectedMonth,
+                timestamp:new Date()
+            });
+            setStatusSaved("Data saved !");
+            setTimeout(() => setStatusSaved(""),3000 );
+        }
+            catch (e){
+                alert("error in saving data"+e.message);
+                setTimeout(() => setStatusSaved(""),3000 );
+            }
+    }
     
     //OTHER VARIABLES
     const months =[
@@ -223,7 +238,12 @@ function FinanceTracker({isDark,onToggleTheme}){
                 incomeSpent={incomeSpent}
                 savingsActualNav={savingsActual}
                                 />
-            <button className="saveButton" type="submit">Save</button>
+            <button className="saveButton" type="button" onClick={handleDetailSave}>Save</button>
+            {savedStatus && 
+                <div className="savedStatus">
+                    <h2>Storage Message</h2>
+                    <p>{savedStatus}</p>
+                </div>}
             <MyCharts
                 incomeActual={incomeActual}
                 billsActual={billsActual}
