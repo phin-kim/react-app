@@ -287,11 +287,12 @@ header .cartDisplay button {
   padding: 12px;
   border-radius: 12px;
   background: transparent;
-  margin-top: 23em;
+  margin-top: 53em;
   border: 2px solid rgb(156, 155, 155);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(156, 155, 155);
   font-size: 1.2rem;
+  left: 13em;
   cursor: pointer;
 }
 header .cartDisplay .cancelCartIcon {
@@ -307,6 +308,33 @@ header .cartDisplay .cancelCartIcon::after {
   width: 100%;
   position: absolute;
   top: 2em;
+}
+header .cartDisplay .summary {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  margin-top: 2em;
+  top: 7em;
+  left: -6em;
+  border-radius: 12px;
+  width: 20em;
+}
+header .cartDisplay .summary thead {
+  text-align: center;
+  background: #fdca77;
+  border-radius: 12px;
+}
+header .cartDisplay .summary thead th {
+  height: 2em;
+}
+header .cartDisplay .summary thead td {
+  width: auto;
+  background: #f8d7a3;
+  text-align: center;
 }
 
 .slogan {
