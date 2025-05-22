@@ -6,6 +6,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #020261;
+  background: linear-gradient(45deg, #FDF4E3, #FFEDD5);
   overflow-x: hidden;
 }
 body .overlay {
@@ -137,23 +139,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-header .toggleTheme {
-  padding: 12px;
-  border-radius: 5px;
-  color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: none;
-  height: 2em;
-  width: 7em;
-  font-size: 1.1rem;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  background: linear-gradient(135deg, #000428, #004e92);
+  margin-top: 0px;
+  position: relative;
+  width: 100%;
+  border-radius: 12px 0px 0px 12px;
   background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
-  position: absolute;
-  left: 75%;
 }
 header .currencyOptionsContainer {
   position: relative;
@@ -171,17 +161,15 @@ header .title {
   position: relative;
   left: 8%;
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: black;
+  color: navy;
 }
 header .searchIcon {
   position: relative;
   height: 30px;
   width: 30px;
-  left: 15%;
+  left: 19%;
   transition: 0.2s ease;
 }
 header .searchIcon:hover {
@@ -195,7 +183,7 @@ header .searchContainer {
   z-index: 2;
   justify-content: center;
   align-items: center;
-  background-color: #fdca77;
+  background: linear-gradient(135deg, #f59f6a 20%, #fcae5d 40%, #fdca77 60%, #fcae5d 80%, #f59f6a 100%);
   transition: display 1s ease;
 }
 header .searchContainer .searchInputIcon {
@@ -247,7 +235,7 @@ header .cart {
   position: relative;
   height: 30px;
   width: 30px;
-  left: -1%;
+  left: -15%;
   transition: 0.2s ease;
 }
 header .cart:hover {
@@ -255,7 +243,7 @@ header .cart:hover {
 }
 header .cartDisplay {
   height: 70em;
-  background: #fdca77;
+  background: linear-gradient(135deg, #f5660d 20%, #fa9d08 40%, #ffab51 60%, #f6ad5e 80%, #ff8c42 100%);
   border-radius: 0px 0px 0px 20px;
   position: absolute;
   float: right;
@@ -266,12 +254,12 @@ header .cartDisplay {
   left: 70%;
   padding-left: 2em;
   box-shadow: 8px 8px 16px gray;
+  color: navy;
 }
 header .cartDisplay h1 {
   font-weight: 100;
   font-size: 1.3rem;
   margin-top: -2em;
-  color: rgb(156, 155, 155);
 }
 header .cartDisplay h2 {
   position: relative;
@@ -279,7 +267,6 @@ header .cartDisplay h2 {
   width: 200%;
   left: -10%;
   text-align: center;
-  color: rgb(156, 155, 155);
 }
 header .cartDisplay button {
   position: absolute;
@@ -290,7 +277,6 @@ header .cartDisplay button {
   margin-top: 53em;
   border: 2px solid rgb(156, 155, 155);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(156, 155, 155);
   font-size: 1.2rem;
   left: 13em;
   cursor: pointer;
@@ -325,7 +311,7 @@ header .cartDisplay .summary {
 }
 header .cartDisplay .summary thead {
   text-align: center;
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
   border-radius: 12px;
 }
 header .cartDisplay .summary thead th {
@@ -333,26 +319,44 @@ header .cartDisplay .summary thead th {
 }
 header .cartDisplay .summary thead td {
   width: auto;
-  background: #f8d7a3;
   text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+}
+header .toggleTheme {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.5s ease;
+  left: 88%;
+}
+header .toggleTheme:hover {
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateX(-10px) translateY(-10px);
 }
 
 .slogan {
   text-align: center;
   font-size: 2rem;
-  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
+  color: navy;
 }
 
 .sloganText {
   text-align: center;
   font-size: 1.5rem;
-  background: linear-gradient(90deg, #fb870b 0%, #ed960b 25%, #fb60ab 70%, #f8045d 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
+  color: navy;
 }
 
 main {
@@ -373,10 +377,11 @@ main nav {
   margin-top: 1.2em;
   margin-bottom: 2em;
   padding-left: 0.5em;
-  background: #F64A8A;
   border-radius: 5px;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
   min-height: 4em;
   display: grid;
+  position: sticky;
   font-weight: bold;
   grid-template-columns: repeat(7, 13%);
 }
@@ -423,6 +428,9 @@ main .myTables {
   width: 100%;
   margin-right: 0.3em;
 }
+main .myTables input {
+  background: transparent;
+}
 main .myTables .overview {
   border-collapse: collapse;
   font-family: sans-serif;
@@ -433,10 +441,11 @@ main .myTables .overview {
   position: relative;
 }
 main .myTables .overview thead {
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
 }
 main .myTables .overview thead tr {
   text-align: center;
+  color: #ec7a34;
 }
 main .myTables .overview thead tr th {
   border: 1px solid #ddd;
@@ -448,7 +457,7 @@ main .myTables .overview thead tr th {
   position: relative;
 }
 main .myTables .overview tbody .subHeading {
-  background: #f8d7a3;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
 }
 main .myTables .overview tbody td {
   border: 1px solid #ddd;
@@ -494,15 +503,15 @@ main .myTables .overflow {
 }
 main .myTables .overflow thead {
   text-align: center;
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
 }
 main .myTables .overflow thead th {
   height: 2em;
 }
 main .myTables .overflow thead td {
   width: auto;
-  background: #f8d7a3;
   text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
 }
 main .myTables .income {
   border-collapse: collapse;
@@ -512,18 +521,25 @@ main .myTables .income {
   margin-left: 2em;
   margin-bottom: 2em;
   position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .income:hover {
+  box-shadow: 8px 8px 16px #61eb88;
+  transform: translateX(-5px) translateY(-5px);
 }
 main .myTables .income thead {
+  filter: brightness(95%);
+  color: #055a1d;
   text-align: center;
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
 }
 main .myTables .income thead th {
   height: 2em;
 }
 main .myTables .income thead td {
   width: auto;
-  background: #f8d7a3;
   text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
 }
 main .myTables .bills {
   border-collapse: collapse;
@@ -533,18 +549,24 @@ main .myTables .bills {
   margin-left: 2em;
   margin-bottom: 2em;
   position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .bills:hover {
+  box-shadow: 8px 8px 16px #f86363;
+  transform: translateX(-5px) translateY(-5px);
 }
 main .myTables .bills thead {
   text-align: center;
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  color: #fd2d2d;
 }
 main .myTables .bills thead th {
   height: 2em;
 }
 main .myTables .bills thead td {
   width: auto;
-  background: #f8d7a3;
   text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
 }
 main .myTables .expenses {
   border-collapse: collapse;
@@ -554,18 +576,23 @@ main .myTables .expenses {
   margin-left: 2em;
   margin-bottom: 2em;
   position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .expenses:hover {
+  box-shadow: 8px 8px 16px #f7995b;
+  transform: translateX(-5px) translateY(-5px);
 }
 main .myTables .expenses thead {
   text-align: center;
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
 }
 main .myTables .expenses thead th {
   height: 2em;
 }
 main .myTables .expenses thead td {
   width: auto;
-  background: #f8d7a3;
   text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
 }
 main .myTables .savings {
   border-collapse: collapse;
@@ -575,18 +602,24 @@ main .myTables .savings {
   margin-left: 2em;
   margin-bottom: 2em;
   position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .savings:hover {
+  box-shadow: 8px 8px 16px #7c78f4;
+  transform: translateX(-5px) translateY(-5px);
 }
 main .myTables .savings thead {
   text-align: center;
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  color: #1e40ff;
 }
 main .myTables .savings thead th {
   height: 2em;
 }
 main .myTables .savings thead td {
   width: auto;
-  background: #f8d7a3;
   text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
 }
 main .myTables .debt {
   border-collapse: collapse;
@@ -599,15 +632,15 @@ main .myTables .debt {
 }
 main .myTables .debt thead {
   text-align: center;
-  background: #fdca77;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
 }
 main .myTables .debt thead th {
   height: 2em;
 }
 main .myTables .debt thead td {
   width: auto;
-  background: #f8d7a3;
   text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
 }
 main .saveButton {
   padding: 12px;
@@ -619,11 +652,12 @@ main .saveButton {
   width: 7em;
   font-size: 1.1rem;
   justify-content: center;
+  outline: none;
   align-items: center;
   display: flex;
   position: relative;
   left: 40%;
-  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  background: linear-gradient(45deg, #4ebd4d, #28df25, #059c02);
   transition: 0.5s ease;
 }
 main .saveButton:hover {

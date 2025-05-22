@@ -199,7 +199,7 @@ function FinanceTracker({isDark,onToggleTheme}){
     return(
         <div className= {`body ${isDark ? "dark" : ""}`}> 
         <header >
-            <h3 className="selectCurrencies">
+           {/* <h3 className="selectCurrencies">
                 <select className="currencyOptionsContainer" name="currency" id="currency">
                     <option className="currencyOptions" value="myCurrencies">UNITED STATES (USD $)</option>
                     <option value="myCurrencies">AUSTRALIA (AUD $)</option>
@@ -207,7 +207,7 @@ function FinanceTracker({isDark,onToggleTheme}){
                     <option value="myCurrencies">GERMANY (EUR)</option>
                     <option value="myCurrencies">IRELAND(EUR)</option>
                 </select>
-            </h3>
+            </h3>*/}
             <h1 className="title">Money Map</h1>
             <button className={`toggleTheme`} onClick={onToggleTheme}>{isDark ? "dark" : "light"}</button>
             <img className="searchIcon" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
