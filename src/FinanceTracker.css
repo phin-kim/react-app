@@ -7,24 +7,24 @@ input[type=number]::-webkit-outer-spin-button {
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #020261;
-  background: linear-gradient(45deg, #FDF4E3, #FFEDD5);
   overflow-x: hidden;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
 }
-body .overlay {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
+
+.body {
+  background: linear-gradient(135deg, #FDF4E3 0%, #FEF3E2 50%, #FFEDD5 100%);
+}
+.body.dark {
+  background: linear-gradient(135deg, #030f0f 0%, #03624c 100%);
 }
 
 .dark header {
-  background: #f0ecec;
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 50%, #03624c 100%);
 }
 .dark main {
-  background: #f0ecec;
-  border-color: #004e92;
-  background: linear-gradient(45deg, #000428 10%, #004e92 40%, #125fac 60%, #004e92 80%, #000428 100%);
-}
-.dark .body {
-  background: #444;
+  border-color: #03624c;
 }
 .dark .currencyOptionsContainer {
   background: transparent;
@@ -34,80 +34,97 @@ body .overlay {
   color: #f0f0f0;
 }
 .dark .toggleTheme {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  color: #f0f0f0;
+  color: #00df82;
+  background: linear-gradient(45deg, #00df82, #03624c);
 }
 .dark .title {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
+  background: linear-gradient(45deg, #00df82, #03624c);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgb(3, 246, 145);
 }
 .dark .cartDisplay {
-  background: linear-gradient(135deg, #000428 30%, #004e92 70%, #1e90ff 100%);
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 30%, #03624c 60%, #024e3b 80%, #030f0f 100%);
+  color: lightgray;
 }
-.dark .text {
-  background: #f0ecec;
+.dark .cartDisplay button {
+  background: linear-gradient(45deg, #00df82, #03624c);
+}
+.dark .cartDisplay .summary thead {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
+}
+.dark .cartDisplay .summary thead td {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: lightgray;
+}
+.dark .cartDisplay .summary tbody tr td {
+  color: lightgray;
 }
 .dark .text .slogan {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(45deg, #00df82, #03624c);
   -webkit-background-clip: text;
           background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(3, 246, 145, 0.655);
 }
 .dark .text .sloganText {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(45deg, #00df82, #03624c);
   -webkit-background-clip: text;
           background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(3, 246, 145, 0.633);
 }
 .dark .searchContainer {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
 }
 .dark nav {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  background: linear-gradient(135deg, #000428 30%, #004e92 40%, #1e90ff 60%, #004e92 80%, #000428 100%);
-  color: #f0f0f0;
+  color: #00df82;
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 30%, #03624c 60%, #024e3b 80%, #030f0f 100%);
+}
+.dark nav .myProgress {
+  background: linear-gradient(45deg, #00df82, #03624c);
 }
 .dark .myTables .overview thead {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  color: #f0f0f0;
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
 }
 .dark .myTables .overview tbody .subHeading {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  color: #f0f0f0;
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
 }
 .dark .myTables .overview tbody tr select {
-  color: #f0f0f0;
+  color: lightgray;
 }
 .dark .myTables .overview tbody tr select option {
-  background: #004e92;
+  background: #024e3b;
 }
 .dark .myTables .overview tbody input {
-  color: #f0f0f0;
+  color: lightgray;
 }
 .dark .myTables .overflow thead,
 .dark .myTables .income thead,
 .dark .myTables .bills thead,
 .dark .myTables .expenses thead,
 .dark .myTables .savings thead {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  color: #f0f0f0;
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
 }
 .dark .myTables .overflow thead td,
 .dark .myTables .income thead td,
 .dark .myTables .bills thead td,
 .dark .myTables .expenses thead td,
 .dark .myTables .savings thead td {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  color: #f0f0f0;
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: lightgray;
 }
 .dark .myTables .overflow tbody tr td,
 .dark .myTables .income tbody tr td,
 .dark .myTables .bills tbody tr td,
 .dark .myTables .expenses tbody tr td,
 .dark .myTables .savings tbody tr td {
-  color: #f0f0f0;
+  color: lightgray;
 }
 .dark .myTables .overflow tbody tr td input::-moz-placeholder, .dark .myTables .income tbody tr td input::-moz-placeholder, .dark .myTables .bills tbody tr td input::-moz-placeholder, .dark .myTables .expenses tbody tr td input::-moz-placeholder, .dark .myTables .savings tbody tr td input::-moz-placeholder {
   color: #f0f0f0;
@@ -125,11 +142,20 @@ body .overlay {
 .dark .myTables .expenses tbody tr input,
 .dark .myTables .savings tbody tr input {
   background: transparent;
-  color: #f0f0f0;
+  color: lightgray;
+}
+.dark .myTables .bills thead tr {
+  color: rgb(255, 31, 31);
+}
+.dark .myTables .expenses thead tr {
+  color: rgb(255, 111, 0);
+}
+.dark .myTables .savings thead tr {
+  color: rgb(25, 25, 233);
 }
 .dark .saveButton {
-  background: linear-gradient(135deg, #000428, #004e92, #1e90ff);
-  color: #f0f0f0;
+  color: lightgray;
+  background: linear-gradient(45deg, #00df82, #03624c);
 }
 .dark .myCharts {
   color: #f0ecec;
@@ -273,13 +299,19 @@ header .cartDisplay button {
   z-index: 4;
   padding: 12px;
   border-radius: 12px;
-  background: transparent;
   margin-top: 53em;
-  border: 2px solid rgb(156, 155, 155);
+  border: none;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
   font-size: 1.2rem;
   left: 13em;
   cursor: pointer;
+  transition: 0.5s ease;
+}
+header .cartDisplay button:hover {
+  box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.603);
+  transform: translate3d(-5px);
+  filter: brightness(110%);
 }
 header .cartDisplay .cancelCartIcon {
   height: 20px;
@@ -305,14 +337,18 @@ header .cartDisplay .summary {
   position: relative;
   margin-top: 2em;
   top: 7em;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   left: -6em;
-  border-radius: 12px;
   width: 20em;
 }
 header .cartDisplay .summary thead {
   text-align: center;
   background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 header .cartDisplay .summary thead th {
   height: 2em;
@@ -321,6 +357,9 @@ header .cartDisplay .summary thead td {
   width: auto;
   text-align: center;
   background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 header .toggleTheme {
   padding: 12px;
@@ -617,27 +656,6 @@ main .myTables .savings thead th {
   height: 2em;
 }
 main .myTables .savings thead td {
-  width: auto;
-  text-align: center;
-  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
-}
-main .myTables .debt {
-  border-collapse: collapse;
-  font-family: sans-serif;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-left: 2em;
-  margin-bottom: 2em;
-  position: relative;
-}
-main .myTables .debt thead {
-  text-align: center;
-  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
-}
-main .myTables .debt thead th {
-  height: 2em;
-}
-main .myTables .debt thead td {
   width: auto;
   text-align: center;
   background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);

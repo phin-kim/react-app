@@ -153,7 +153,7 @@ function FinanceTracker({isDark,onToggleTheme}){
                 timestamp:serverTimestamp()
             });
             setStatusSaved("Data saved !");
-            setTimeout(() => setStatusSaved(""),3000 );
+            setTimeout(() => setStatusSaved(""),2000 );
         }
             catch (e){
                 alert("error in saving data"+e.message);
@@ -220,7 +220,7 @@ function FinanceTracker({isDark,onToggleTheme}){
             </div>
             )}
             
-            <img className="cart" src="../src/assets/shopping-cart (1).png" alt="shopping cart icon" onClick={handleCartDisplay} />
+            <img className="cart" src="../src/assets/shopping.png" alt="shopping cart icon" onClick={handleCartDisplay} />
             {cartDisplayed &&(
                 <div className={`cartDisplay `} ref={cartRef}>
                         <h1>CART</h1>
