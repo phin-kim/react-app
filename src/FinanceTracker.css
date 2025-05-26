@@ -15,6 +15,7 @@ body {
 
 .body {
   background: linear-gradient(135deg, #FDF4E3 0%, #FEF3E2 50%, #FFEDD5 100%);
+  height: 300vh;
 }
 .body.dark {
   background: linear-gradient(135deg, #030f0f 0%, #03624c 100%);
@@ -24,7 +25,7 @@ body {
   background: linear-gradient(135deg, #030f0f 0%, #024e3b 50%, #03624c 100%);
 }
 .dark main {
-  border-color: #03624c;
+  border-color: #04cb9d;
 }
 .dark .currencyOptionsContainer {
   background: transparent;
@@ -48,18 +49,18 @@ body {
   background: linear-gradient(135deg, #030f0f 0%, #024e3b 30%, #03624c 60%, #024e3b 80%, #030f0f 100%);
   color: lightgray;
 }
-.dark .cartDisplay button {
+.dark .cartDisplay .cartIconContainer button {
   background: linear-gradient(45deg, #00df82, #03624c);
 }
-.dark .cartDisplay .summary thead {
+.dark .cartDisplay .cartTableContainer .summary thead {
   background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
   color: #00df82;
 }
-.dark .cartDisplay .summary thead td {
+.dark .cartDisplay .cartTableContainer .summary thead td {
   background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
   color: lightgray;
 }
-.dark .cartDisplay .summary tbody tr td {
+.dark .cartDisplay .cartTableContainer .summary tbody tr td {
   color: lightgray;
 }
 .dark .text .slogan {
@@ -103,6 +104,11 @@ body {
 .dark .myTables .overview tbody input {
   color: lightgray;
 }
+.dark .myTables .overview tbody input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #03352B inset !important;
+  -webkit-text-fill-color: black !important;
+}
 .dark .myTables .overflow thead,
 .dark .myTables .income thead,
 .dark .myTables .bills thead,
@@ -144,6 +150,15 @@ body {
   background: transparent;
   color: lightgray;
 }
+.dark .myTables .overflow tbody tr input:-webkit-autofill,
+.dark .myTables .income tbody tr input:-webkit-autofill,
+.dark .myTables .bills tbody tr input:-webkit-autofill,
+.dark .myTables .expenses tbody tr input:-webkit-autofill,
+.dark .myTables .savings tbody tr input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #012921 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #043027 inset !important;
+  -webkit-text-fill-color: lightgray !important;
+}
 .dark .myTables .bills thead tr {
   color: rgb(255, 31, 31);
 }
@@ -156,6 +171,16 @@ body {
 .dark .saveButton {
   color: lightgray;
   background: linear-gradient(45deg, #00df82, #03624c);
+}
+.dark .deleteButton {
+  background: linear-gradient(45deg, #800000, #cc0000, #990000);
+}
+.dark .savedStatus {
+  background: linear-gradient(45deg, #00df82, #03624c);
+  color: lightgray;
+}
+.dark .savedStatus h2 {
+  background: linear-gradient(45deg, #025835, #03624c);
 }
 .dark .myCharts {
   color: #f0ecec;
@@ -268,66 +293,82 @@ header .cart:hover {
   transform: scale(1.1);
 }
 header .cartDisplay {
-  height: 70em;
+  min-height: 140vh;
   background: linear-gradient(135deg, #f5660d 20%, #fa9d08 40%, #ffab51 60%, #f6ad5e 80%, #ff8c42 100%);
   border-radius: 0px 0px 0px 20px;
   position: absolute;
   float: right;
   z-index: 4;
+  width: 24em;
   justify-content: center;
   align-items: center;
-  display: flex;
   left: 70%;
+  display: grid;
+  grid-template-rows: 5em auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-left: 2em;
+  padding-top: 22em;
   box-shadow: 8px 8px 16px gray;
   color: navy;
 }
-header .cartDisplay h1 {
-  font-weight: 100;
-  font-size: 1.3rem;
-  margin-top: -2em;
-}
-header .cartDisplay h2 {
+header .cartDisplay .cartIconContainer {
   position: relative;
-  top: 13%;
-  width: 200%;
-  left: -10%;
-  text-align: center;
+  top: 17em;
+  left: 0em;
+  height: 8em;
+  min-width: 24em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 }
-header .cartDisplay button {
+header .cartDisplay .cartIconContainer h1 {
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin-top: -2em;
+  margin-left: -12em;
   position: absolute;
+}
+header .cartDisplay .cartIconContainer button {
+  position: absolute;
+  top: 4em;
   z-index: 4;
   padding: 12px;
   border-radius: 12px;
-  margin-top: 53em;
   border: none;
+  width: 7em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
   font-size: 1.2rem;
-  left: 13em;
+  left: 0em;
   cursor: pointer;
   transition: 0.5s ease;
 }
-header .cartDisplay button:hover {
+header .cartDisplay .cartIconContainer button:hover {
   box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.603);
   transform: translate3d(-5px);
   filter: brightness(110%);
 }
-header .cartDisplay .cancelCartIcon {
+header .cartDisplay .cartIconContainer .cancelCartIcon {
   height: 20px;
   width: 20px;
-  position: relative;
-  margin-top: -3.5em;
-  left: 65%;
-}
-header .cartDisplay .cancelCartIcon::after {
-  content: "";
-  height: 2px;
-  width: 100%;
   position: absolute;
-  top: 2em;
+  top: 1.5em;
+  left: 20em;
+  z-index: 5;
 }
-header .cartDisplay .summary {
+header .cartDisplay h2 {
+  position: absolute;
+  left: 3em;
+  text-align: center;
+}
+header .cartDisplay .cartTableContainer {
+  top: 23em;
+  position: relative;
+  left: -2em;
+}
+header .cartDisplay .cartTableContainer .summary {
   border-collapse: collapse;
   font-family: sans-serif;
   border: none;
@@ -335,31 +376,53 @@ header .cartDisplay .summary {
   margin-left: 2em;
   margin-bottom: 2em;
   position: relative;
-  margin-top: 2em;
-  top: 7em;
+  margin-top: 0em;
+  padding-bottom: 5em;
+  position: relative;
   background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  left: -6em;
   width: 20em;
 }
-header .cartDisplay .summary thead {
+header .cartDisplay .cartTableContainer .summary thead {
   text-align: center;
   background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
   background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-header .cartDisplay .summary thead th {
+header .cartDisplay .cartTableContainer .summary thead th {
   height: 2em;
 }
-header .cartDisplay .summary thead td {
+header .cartDisplay .cartTableContainer .summary thead td {
   width: auto;
   text-align: center;
   background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
   background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+}
+header .cartDisplay .cartTableContainer .summary .deleteTableButton {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  display: flex;
+  height: 2em;
+  background: linear-gradient(45deg, #ff0000, #ff6666);
+  transition: 0.5s ease;
+}
+header .cartDisplay .cartTableContainer .summary .deleteTableButton:hover {
+  box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.603);
+  transform: translate3d(-5px);
+  filter: brightness(110%);
 }
 header .toggleTheme {
   padding: 12px;
@@ -399,7 +462,7 @@ header .toggleTheme:hover {
 }
 
 main {
-  height: 90em;
+  height: 95em;
   margin-bottom: 2em;
   border: 20px solid gainsboro;
   border-radius: 12px;
@@ -469,6 +532,11 @@ main .myTables {
 }
 main .myTables input {
   background: transparent;
+}
+main .myTables input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #FEF4E3 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #FEF4E3 inset !important;
+  -webkit-text-fill-color: black !important;
 }
 main .myTables .overview {
   border-collapse: collapse;
@@ -679,6 +747,31 @@ main .saveButton {
   transition: 0.5s ease;
 }
 main .saveButton:hover {
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 10px;
+  transform: translateY(-10px) translateX(-10px);
+}
+main .deleteButton {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 55%;
+  top: -2em;
+  background: linear-gradient(to right, #ff0000, #ff6666);
+  background: linear-gradient(45deg, #a90e0e, #ff0000, #c40606);
+  transition: 0.5s ease;
+}
+main .deleteButton:hover {
   box-shadow: 2px 2px 4px gray;
   border-radius: 10px;
   transform: translateY(-10px) translateX(-10px);

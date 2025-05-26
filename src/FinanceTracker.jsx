@@ -2,7 +2,7 @@ import React,{useState,useEffect, useRef,} from "react";
 import MyCharts from "./charts";
 import MyTables from "./tables";
 import { db }  from "./firebase";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs,deleteDoc,doc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
 function FinanceTracker({isDark,onToggleTheme}){
     //USE STATES
@@ -27,6 +27,7 @@ function FinanceTracker({isDark,onToggleTheme}){
     });
     const [savedStatus,setStatusSaved] = useState("");    
     const [loadData,setLoadData] = useState("");
+    const [allSavedData,setAllSavedData] = useState([]);
     //USE REF
     const searchRef = useRef(null);
     const cartRef = useRef(null);
@@ -167,6 +168,7 @@ function FinanceTracker({isDark,onToggleTheme}){
             querySnapshot.forEach((doc)=>{
                 data.push({id:doc.id,...doc.data()});
             });
+            setAllSavedData(data);
             if(data.length > 0){
                 const latest = data
                     .filter(doc=> doc.timestamp)
@@ -179,14 +181,31 @@ function FinanceTracker({isDark,onToggleTheme}){
             setSelectedMonth(latest.selectedMonth);
             setLoadData(latest)
             }
-            
             return data;
         }
         catch(e){
             alert("error fetching data", + e.message);
         }
     }
-
+    const handleDelete=()=>{
+        setAllRows({
+            income:   [{col1: "", col2: "", col3: ""}],
+            bills:    [{col1: "", col2: "", col3: ""}],
+            expenses: [{col1: "", col2: "", col3: ""}],
+            savings:  [{col1: "", col2: "", col3: ""}],
+        });
+        setSelectedMonth("")
+    };
+    const deleteTable =async (id)=>{
+        try{
+            if(!id) return;
+            await deleteDoc(doc(db,"userinputs",id));
+            setAllSavedData(prev => prev.filter(entry => entry.id !==id));
+        }
+        catch(e){
+            alert("error deleting data" + e.message);
+        }
+    }
     //OTHER VARIABLES
     const months =[
         "January", "February", "March", "April", "May", "June",
@@ -199,7 +218,7 @@ function FinanceTracker({isDark,onToggleTheme}){
     return(
         <div className= {`body ${isDark ? "dark" : ""}`}> 
         <header >
-           {/* <h3 className="selectCurrencies">
+        {/* <h3 className="selectCurrencies">
                 <select className="currencyOptionsContainer" name="currency" id="currency">
                     <option className="currencyOptions" value="myCurrencies">UNITED STATES (USD $)</option>
                     <option value="myCurrencies">AUSTRALIA (AUD $)</option>
@@ -223,66 +242,74 @@ function FinanceTracker({isDark,onToggleTheme}){
             <img className="cart" src="../src/assets/shopping.png" alt="shopping cart icon" onClick={handleCartDisplay} />
             {cartDisplayed &&(
                 <div className={`cartDisplay `} ref={cartRef}>
-                        <h1>CART</h1>
+                    <div className="cartIconContainer">
+                        <h1>History</h1>
                         <img className="cancelCartIcon" src="../src/assets/cancel.png" alt="" onClick={()=>setCartDisplay(false)}/>
-                        {loadData ?(<h2></h2>) : (<h2>Your cart is currently empty</h2>)}
-                        {loadData && typeof loadData ==="object" &&(
-                            <div>
-                                <table className="summary">
-                                    <thead>
-                                        <tr>
-                                            <th colSpan={3}>{loadData.selectedMonth}  Summary</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Name</td>
-                                            <td>Budget</td>
-                                            <td>Actual</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Income</td>
-                                            <td>{loadData.incomeBudget}</td>
-                                            <td>{loadData.incomeActual}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bills</td>
-                                            <td>{loadData.billsBudget}</td>
-                                            <td>{loadData.billsActual}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Expenses</td>
-                                            <td>{loadData.expensesBudget}</td>
-                                            <td>{loadData.expensesActual}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Savings</td>
-                                            <td>{loadData.savingsBudget}</td>
-                                            <td>{loadData.savingsActual}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sum</td>
-                                            <td>{loadData.grandBudgetTotal}</td>
-                                            <td>{loadData.grandActualTotal}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Time saved:</td>
-                                            <td>{loadData.timestamp && loadData.timestamp.toDate
-                                                ? loadData.timestamp.toDate().toLocaleString()
-                                                : new Date(loadData.timestamp).toLocaleString()}
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <button onClick={fetchData}>Load Data</button>
+                    </div>
+                        {/*allSavedData.length === 0 ? (<h2>Your cart is empty</h2>):(<h2></h2>)*/}
+                        {allSavedData.length > 0 &&(
+                            <div className="cartTableContainer">
+                                {allSavedData.map((entry,index)=>(
+                                    <table key={index} className="summary" >
+                                        <thead>
+                                            <tr>
+                                                <th colSpan={3}>{entry.selectedMonth}  Summary</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Budget</td>
+                                                <td>Actual</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Income</td>
+                                                <td>{entry.incomeBudget}</td>
+                                                <td>{entry.incomeActual}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bills</td>
+                                                <td>{entry.billsBudget}</td>
+                                                <td>{entry.billsActual}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Expenses</td>
+                                                <td>{entry.expensesBudget}</td>
+                                                <td>{entry.expensesActual}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Savings</td>
+                                                <td>{entry.savingsBudget}</td>
+                                                <td>{entry.savingsActual}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sum</td>
+                                                <td>{entry.grandBudgetTotal}</td>
+                                                <td>{entry.grandActualTotal}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Time saved:</td>
+                                                <td>{entry.timestamp && entry.timestamp.toDate
+                                                    ? entry.timestamp.toDate().toLocaleString()
+                                                    : new Date(entry.timestamp).toLocaleString()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colSpan={3}>
+                                                    <button className="deleteTableButton" onClick={()=>deleteTable(entry.id)}>Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                ))}
                             </div>
                         )}
-                        <button onClick={fetchData}>Load Data</button>
                 </div>
             )}
         </header>
 
         <hr />
-
         <section className="text">
             <h2 className={`slogan ${isDark && "dark"}`}>Keep your money on a short leash</h2>
             <p className={`sloganText ${isDark && "dark"}`}>Track every coin. Grow every goal</p>
@@ -321,6 +348,7 @@ function FinanceTracker({isDark,onToggleTheme}){
                 savingsActualNav={savingsActual}
                                 />
             <button className="saveButton" type="button" onClick={handleDetailSave}>Save</button>
+            <button className="deleteButton" onClick={handleDelete} type="button">Delete</button>
             {savedStatus && 
                 <div className="savedStatus">
                     <h2>Storage Message</h2>
