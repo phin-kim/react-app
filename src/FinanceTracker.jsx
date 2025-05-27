@@ -4,7 +4,7 @@ import MyTables from "./tables";
 import { db }  from "./firebase";
 import { collection, addDoc, getDocs,deleteDoc,doc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
-function FinanceTracker({isDark,onToggleTheme}){
+function FinanceTracker({isDark,onToggleTheme,...props}){
     //USE STATES
     const [searchDisplayed,setSearchDisplayed] = useState(false);
     const [cartDisplayed,setCartDisplay] = useState(false);
@@ -32,6 +32,7 @@ function FinanceTracker({isDark,onToggleTheme}){
     const searchRef = useRef(null);
     const cartRef = useRef(null);
     const monthSelect = useRef(null);
+    const tableRef = useRef([]);
     
     //USE EFFECT
     useEffect(()=>{
@@ -89,7 +90,24 @@ function FinanceTracker({isDark,onToggleTheme}){
         }, 1000);
         return ()=>clearTimeout(timeout);
     },[allRows]);
-    
+    useEffect(()=>{
+        const observer = new window.IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.remove("fadeOut");
+                }else{
+                    entry.target.classList.add("fadeOut");
+                }
+            });
+        },{
+            root:document.querySelector(".cartTableContainer"),
+            threshold:0.15,
+        });
+        tableRef.current.forEach((ref)=>{
+            if(ref) observer.observe(ref);
+        });
+        return()=> observer.disconnect();
+    },[allSavedData])
     /*useEffect(()=>{
         const anyFieldFilled = Object.values(allRows).some(row=>Object.values(row).some(value=>value !==""&& value !== null &&value !== undefined));
         if(anyFieldFilled){
@@ -206,6 +224,9 @@ function FinanceTracker({isDark,onToggleTheme}){
             alert("error deleting data" + e.message);
         }
     }
+    const searchInput = ()=>{
+        
+    }
     //OTHER VARIABLES
     const months =[
         "January", "February", "March", "April", "May", "June",
@@ -215,6 +236,7 @@ function FinanceTracker({isDark,onToggleTheme}){
         outline:"none",
         border:"none",
     }
+    
     return(
         <div className= {`body ${isDark ? "dark" : ""}`}> 
         <header >
@@ -251,10 +273,12 @@ function FinanceTracker({isDark,onToggleTheme}){
                         {allSavedData.length > 0 &&(
                             <div className="cartTableContainer">
                                 {allSavedData.map((entry,index)=>(
-                                    <table key={index} className="summary" >
+                                    <table key={entry.id} 
+                                        className="summary" 
+                                        ref={el => (tableRef.current[index] = el)} >
                                         <thead>
                                             <tr>
-                                                <th colSpan={3}>{entry.selectedMonth}  Summary</th>
+                                                <th colSpan={3}>{entry.selectedMonth}  Summary {new Date().getFullYear()}</th>
                                             </tr>
                                             <tr>
                                                 <td>Name</td>

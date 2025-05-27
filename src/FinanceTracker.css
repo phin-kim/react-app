@@ -63,6 +63,10 @@ body {
 .dark .cartDisplay .cartTableContainer .summary tbody tr td {
   color: lightgray;
 }
+.dark .cartDisplay .cartTableContainer .summary .deleteTableButton {
+  background: linear-gradient(45deg, #800000, #cc0000, #990000);
+  color: lightgray;
+}
 .dark .text .slogan {
   background: linear-gradient(45deg, #00df82, #03624c);
   -webkit-background-clip: text;
@@ -174,6 +178,7 @@ body {
 }
 .dark .deleteButton {
   background: linear-gradient(45deg, #800000, #cc0000, #990000);
+  color: lightgray;
 }
 .dark .savedStatus {
   background: linear-gradient(45deg, #00df82, #03624c);
@@ -293,7 +298,7 @@ header .cart:hover {
   transform: scale(1.1);
 }
 header .cartDisplay {
-  min-height: 140vh;
+  min-height: 174vh;
   background: linear-gradient(135deg, #f5660d 20%, #fa9d08 40%, #ffab51 60%, #f6ad5e 80%, #ff8c42 100%);
   border-radius: 0px 0px 0px 20px;
   position: absolute;
@@ -305,23 +310,23 @@ header .cartDisplay {
   left: 70%;
   display: grid;
   grid-template-rows: 5em auto;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   padding-left: 2em;
-  padding-top: 22em;
+  padding-top: 0em;
   box-shadow: 8px 8px 16px gray;
   color: navy;
 }
 header .cartDisplay .cartIconContainer {
   position: relative;
-  top: 17em;
+  top: 33em;
   left: 0em;
   height: 8em;
   min-width: 24em;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 7;
 }
 header .cartDisplay .cartIconContainer h1 {
   font-weight: 100;
@@ -364,9 +369,17 @@ header .cartDisplay h2 {
   text-align: center;
 }
 header .cartDisplay .cartTableContainer {
-  top: 23em;
+  top: 19em;
   position: relative;
   left: -2em;
+  max-height: 70vh;
+  overflow-y: auto;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  scroll-behavior: smooth;
+}
+header .cartDisplay .cartTableContainer::-webkit-scrollbar {
+  display: none;
 }
 header .cartDisplay .cartTableContainer .summary {
   border-collapse: collapse;
@@ -415,13 +428,16 @@ header .cartDisplay .cartTableContainer .summary .deleteTableButton {
   outline: none;
   align-items: center;
   display: flex;
-  height: 2em;
+  height: 0.5em;
+  width: 7em;
+  position: relative;
+  left: 5em;
   background: linear-gradient(45deg, #ff0000, #ff6666);
   transition: 0.5s ease;
 }
 header .cartDisplay .cartTableContainer .summary .deleteTableButton:hover {
-  box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.603);
-  transform: translate3d(-5px);
+  box-shadow: 8px 8px 16px rgba(179, 178, 178, 0.603);
+  transform: scale(1.1);
   filter: brightness(110%);
 }
 header .toggleTheme {
