@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 //import './weather.css'
 import './FinanceTracker.css'
+import './FinanceTrackerResponsive.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

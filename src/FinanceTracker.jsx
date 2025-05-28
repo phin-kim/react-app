@@ -224,9 +224,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
             alert("error deleting data" + e.message);
         }
     }
-    const searchInput = ()=>{
-        
-    }
+    
     //OTHER VARIABLES
     const months =[
         "January", "February", "March", "April", "May", "June",
@@ -240,16 +238,13 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
     return(
         <div className= {`body ${isDark ? "dark" : ""}`}> 
         <header >
-        {/* <h3 className="selectCurrencies">
-                <select className="currencyOptionsContainer" name="currency" id="currency">
-                    <option className="currencyOptions" value="myCurrencies">UNITED STATES (USD $)</option>
-                    <option value="myCurrencies">AUSTRALIA (AUD $)</option>
-                    <option value="myCurrencies">CANADA (CAD $)</option>
-                    <option value="myCurrencies">GERMANY (EUR)</option>
-                    <option value="myCurrencies">IRELAND(EUR)</option>
-                </select>
-            </h3>*/}
             <h1 className="title">Money Map</h1>
+            <div className="menu">
+                <h2>Menu</h2>
+                <img className="searchIconSmall" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
+                <img className="cartSmall" src="../src/assets/shopping.png" alt="shopping cart icon" onClick={handleCartDisplay} />
+                <button className={`toggleThemeSmall`} onClick={onToggleTheme}>{isDark ? "dark" : "light"}</button>
+            </div>
             <button className={`toggleTheme`} onClick={onToggleTheme}>{isDark ? "dark" : "light"}</button>
             <img className="searchIcon" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
             {searchDisplayed 
@@ -344,10 +339,10 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
                 <h2 className="month">{selectedMonth}</h2>
                 <p>Budgeted Income <span className="budgeted"><b>{grandBudgetTotal}</b></span></p>
                 <p>Actual Income<span className="leftToBudget"><b>{grandActualTotal}</b></span></p>
-                <p>Income spent<span className="incomeSpent"><b>{incomeSpent}</b></span></p>
+                <p>Income Spent<span className="incomeSpent"><b>{incomeSpent}</b></span></p>
                 <progress className="myProgress" value="50" max="100"></progress>
                 <p>Savings<span className="incomeSaved"><b>{savingsActual}</b></span></p>
-                <p>income leftover <span className="incomeLeftover"><b>{incomeLeft}</b></span></p>
+                <p>Income Leftover <span className="incomeLeftover"><b>{incomeLeft}</b></span></p>
             </nav>
             <MyTables
                 monthSelect={monthSelect}
