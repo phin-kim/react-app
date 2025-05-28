@@ -1,0 +1,1111 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #020261;
+  overflow-x: hidden;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.body {
+  background: linear-gradient(135deg, #FDF4E3 0%, #FEF3E2 50%, #FFEDD5 100%);
+  height: 300vh;
+}
+.body.dark {
+  background: linear-gradient(135deg, #030f0f 0%, #03624c 100%);
+}
+
+.dark header {
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 50%, #03624c 100%);
+}
+.dark main {
+  border-color: #04cb9d;
+}
+.dark .currencyOptionsContainer {
+  background: transparent;
+}
+.dark .currencyOptionsContainer option {
+  background: #004e92;
+  color: #f0f0f0;
+}
+.dark .toggleTheme {
+  color: #00df82;
+  background: linear-gradient(45deg, #00df82, #03624c);
+}
+.dark .title {
+  background: linear-gradient(45deg, #00df82, #03624c);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgb(3, 246, 145);
+}
+.dark .cartDisplay {
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 30%, #03624c 60%, #024e3b 80%, #030f0f 100%);
+  color: lightgray;
+}
+.dark .cartDisplay .cartIconContainer button {
+  background: linear-gradient(45deg, #00df82, #03624c);
+}
+.dark .cartDisplay .cartTableContainer .summary thead {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
+}
+.dark .cartDisplay .cartTableContainer .summary thead td {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: lightgray;
+}
+.dark .cartDisplay .cartTableContainer .summary tbody tr td {
+  color: lightgray;
+}
+.dark .cartDisplay .cartTableContainer .summary .deleteTableButton {
+  background: linear-gradient(45deg, #800000, #cc0000, #990000);
+  color: lightgray;
+}
+.dark .text .slogan {
+  background: linear-gradient(45deg, #00df82, #03624c);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(3, 246, 145, 0.655);
+}
+.dark .text .sloganText {
+  background: linear-gradient(45deg, #00df82, #03624c);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(3, 246, 145, 0.633);
+}
+.dark .searchContainer {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+}
+.dark nav {
+  color: #00df82;
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 30%, #03624c 60%, #024e3b 80%, #030f0f 100%);
+}
+.dark nav .myProgress {
+  background: linear-gradient(45deg, #00df82, #03624c);
+}
+.dark .myTables .overview thead {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
+}
+.dark .myTables .overview tbody .subHeading {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
+}
+.dark .myTables .overview tbody tr select {
+  color: lightgray;
+}
+.dark .myTables .overview tbody tr select option {
+  background: #024e3b;
+}
+.dark .myTables .overview tbody input {
+  color: lightgray;
+}
+.dark .myTables .overview tbody input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #03352B inset !important;
+  -webkit-text-fill-color: black !important;
+}
+.dark .myTables .overflow thead,
+.dark .myTables .income thead,
+.dark .myTables .bills thead,
+.dark .myTables .expenses thead,
+.dark .myTables .savings thead {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: #00df82;
+}
+.dark .myTables .overflow thead td,
+.dark .myTables .income thead td,
+.dark .myTables .bills thead td,
+.dark .myTables .expenses thead td,
+.dark .myTables .savings thead td {
+  background: linear-gradient(45deg, #084537, #0b8c56, #03624c);
+  color: lightgray;
+}
+.dark .myTables .overflow tbody tr td,
+.dark .myTables .income tbody tr td,
+.dark .myTables .bills tbody tr td,
+.dark .myTables .expenses tbody tr td,
+.dark .myTables .savings tbody tr td {
+  color: lightgray;
+}
+.dark .myTables .overflow tbody tr td input::-moz-placeholder, .dark .myTables .income tbody tr td input::-moz-placeholder, .dark .myTables .bills tbody tr td input::-moz-placeholder, .dark .myTables .expenses tbody tr td input::-moz-placeholder, .dark .myTables .savings tbody tr td input::-moz-placeholder {
+  color: #f0f0f0;
+}
+.dark .myTables .overflow tbody tr td input::placeholder,
+.dark .myTables .income tbody tr td input::placeholder,
+.dark .myTables .bills tbody tr td input::placeholder,
+.dark .myTables .expenses tbody tr td input::placeholder,
+.dark .myTables .savings tbody tr td input::placeholder {
+  color: #f0f0f0;
+}
+.dark .myTables .overflow tbody tr input,
+.dark .myTables .income tbody tr input,
+.dark .myTables .bills tbody tr input,
+.dark .myTables .expenses tbody tr input,
+.dark .myTables .savings tbody tr input {
+  background: transparent;
+  color: lightgray;
+}
+.dark .myTables .overflow tbody tr input:-webkit-autofill,
+.dark .myTables .income tbody tr input:-webkit-autofill,
+.dark .myTables .bills tbody tr input:-webkit-autofill,
+.dark .myTables .expenses tbody tr input:-webkit-autofill,
+.dark .myTables .savings tbody tr input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #012921 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #043027 inset !important;
+  -webkit-text-fill-color: lightgray !important;
+}
+.dark .myTables .bills thead tr {
+  color: rgb(255, 31, 31);
+}
+.dark .myTables .expenses thead tr {
+  color: rgb(255, 111, 0);
+}
+.dark .myTables .savings thead tr {
+  color: rgb(25, 25, 233);
+}
+.dark .saveButton {
+  color: lightgray;
+  background: linear-gradient(45deg, #00df82, #03624c);
+}
+.dark .deleteButton {
+  background: linear-gradient(45deg, #800000, #cc0000, #990000);
+  color: lightgray;
+}
+.dark .savedStatus {
+  background: linear-gradient(45deg, #00df82, #03624c);
+  color: lightgray;
+}
+.dark .savedStatus h2 {
+  background: linear-gradient(45deg, #025835, #03624c);
+}
+.dark .myCharts {
+  color: #f0ecec;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  position: relative;
+  width: 100%;
+  border-radius: 12px 0px 0px 12px;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+}
+header .currencyOptionsContainer {
+  position: relative;
+  padding: 2px;
+  border-radius: 4px;
+  color: #000;
+}
+header .currencyOptionsContainer .currencyOptions {
+  color: #000;
+  padding: 2px;
+}
+header .title {
+  text-align: center;
+  display: flex;
+  position: relative;
+  left: 8%;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: navy;
+}
+header .searchIcon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 10%;
+  transition: 0.2s ease;
+}
+header .searchIcon:hover {
+  transform: scale(1.1);
+}
+header .searchContainer {
+  position: absolute;
+  height: 10em;
+  width: 100%;
+  box-shadow: 4px 4px 8px gray;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f59f6a 20%, #fcae5d 40%, #fdca77 60%, #fcae5d 80%, #f59f6a 100%);
+  transition: display 1s ease;
+}
+header .searchContainer .searchInputIcon {
+  position: absolute;
+  top: 51%;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  z-index: 3;
+  left: 11%;
+}
+header .searchContainer .searchInput {
+  height: 4em;
+  font-size: 1.2em;
+  position: absolute;
+  top: 3em;
+  outline: none;
+  border: none;
+  left: 10%;
+  border-radius: 12px;
+  width: 80%;
+  padding-left: 3em;
+}
+header .searchContainer .searchInput:focus {
+  outline: none;
+}
+header .searchContainer .searchInput::-moz-placeholder {
+  color: #c0bfbf;
+}
+header .searchContainer .searchInput::placeholder {
+  color: #c0bfbf;
+}
+header .searchContainer .searchInput::-webkit-search-cancel-button {
+  display: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+header .searchContainer .cancelInputIcon {
+  position: absolute;
+  position: absolute;
+  top: 51%;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  z-index: 3;
+  left: 85%;
+}
+header .cart {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: -14%;
+  transition: 0.2s ease;
+}
+header .cart:hover {
+  transform: scale(1.1);
+}
+header .cartDisplay {
+  min-height: 174vh;
+  background: linear-gradient(135deg, #f5660d 20%, #fa9d08 40%, #ffab51 60%, #f6ad5e 80%, #ff8c42 100%);
+  border-radius: 0px 0px 0px 20px;
+  position: absolute;
+  float: right;
+  z-index: 4;
+  width: 24em;
+  justify-content: center;
+  align-items: center;
+  left: 70%;
+  display: grid;
+  grid-template-rows: 5em auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-left: 2em;
+  padding-top: 0em;
+  box-shadow: 8px 8px 16px gray;
+  color: navy;
+}
+header .cartDisplay .cartIconContainer {
+  position: relative;
+  top: 33em;
+  left: 0em;
+  height: 8em;
+  min-width: 24em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 7;
+}
+header .cartDisplay .cartIconContainer h1 {
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin-top: -2em;
+  margin-left: -12em;
+  position: absolute;
+}
+header .cartDisplay .cartIconContainer button {
+  position: absolute;
+  top: 4em;
+  z-index: 4;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  width: 7em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  font-size: 1.2rem;
+  left: 0em;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+header .cartDisplay .cartIconContainer button:hover {
+  box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.603);
+  transform: translate3d(-5px);
+  filter: brightness(110%);
+}
+header .cartDisplay .cartIconContainer .cancelCartIcon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 1.5em;
+  left: 20em;
+  z-index: 5;
+}
+header .cartDisplay h2 {
+  position: absolute;
+  left: 3em;
+  text-align: center;
+}
+header .cartDisplay .cartTableContainer {
+  top: 19em;
+  position: relative;
+  left: -2em;
+  max-height: 70vh;
+  overflow-y: auto;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  scroll-behavior: smooth;
+}
+header .cartDisplay .cartTableContainer::-webkit-scrollbar {
+  display: none;
+}
+header .cartDisplay .cartTableContainer .summary {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  margin-top: 0em;
+  padding-bottom: 5em;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 20em;
+}
+header .cartDisplay .cartTableContainer .summary thead {
+  text-align: center;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+header .cartDisplay .cartTableContainer .summary thead th {
+  height: 2em;
+}
+header .cartDisplay .cartTableContainer .summary thead td {
+  width: auto;
+  text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+header .cartDisplay .cartTableContainer .summary .deleteTableButton {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  display: flex;
+  height: 0.5em;
+  width: 7em;
+  position: relative;
+  left: 5em;
+  background: linear-gradient(45deg, #ff0000, #ff6666);
+  transition: 0.5s ease;
+}
+header .cartDisplay .cartTableContainer .summary .deleteTableButton:hover {
+  box-shadow: 8px 8px 16px rgba(179, 178, 178, 0.603);
+  transform: scale(1.1);
+  filter: brightness(110%);
+}
+header .toggleTheme {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.5s ease;
+  left: 88%;
+}
+header .toggleTheme:hover {
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateX(-10px) translateY(-10px);
+}
+
+.slogan {
+  text-align: center;
+  font-size: 2rem;
+  color: navy;
+}
+
+.sloganText {
+  text-align: center;
+  font-size: 1.5rem;
+  color: navy;
+}
+
+main {
+  height: 95em;
+  margin-bottom: 2em;
+  border: 20px solid gainsboro;
+  border-radius: 12px;
+  max-width: 95%;
+  position: relative;
+  left: 1%;
+}
+main nav {
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  max-width: 90%;
+  margin-left: 6%;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
+  padding-left: 0.5em;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  min-height: 4em;
+  display: grid;
+  position: sticky;
+  font-weight: bold;
+  grid-template-columns: repeat(7, 13%);
+}
+main nav .budgeted {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 13em;
+}
+main nav .leftToBudget {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 23.6rem;
+}
+main nav .incomeSpent {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 37.5em;
+}
+main nav .myProgress {
+  padding: 12px;
+  height: 20px;
+  background-color: #F7E7CE;
+  border-radius: 5px;
+  margin-left: -2em;
+}
+main nav .incomeSaved {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 74%;
+}
+main nav .incomeLeftover {
+  position: absolute;
+  top: 2.9em;
+  font-size: 0.9rem;
+  left: 88%;
+}
+main .myTables {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin-right: 0.3em;
+}
+main .myTables input {
+  background: transparent;
+}
+main .myTables input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #FEF4E3 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #FEF4E3 inset !important;
+  -webkit-text-fill-color: black !important;
+}
+main .myTables .overview {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .overview thead {
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+}
+main .myTables .overview thead tr {
+  text-align: center;
+  color: #ec7a34;
+}
+main .myTables .overview thead tr th {
+  border: 1px solid #ddd;
+  padding: 5px 6px;
+  text-align: center;
+  vertical-align: middle;
+  height: 2em;
+  text-align: center;
+  position: relative;
+}
+main .myTables .overview tbody .subHeading {
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+}
+main .myTables .overview tbody td {
+  border: 1px solid #ddd;
+  padding: 5px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+main .myTables .overview tbody .monthSelect {
+  padding: 2px;
+  border: none;
+  padding-left: 2em;
+  color: black;
+  outline: none;
+  text-align: center;
+  background: transparent;
+}
+main .myTables .overview tbody .chooseYear {
+  padding: 2px;
+  border: none;
+  padding-left: 2em;
+  color: black;
+  outline: none;
+  text-align: center;
+  background: transparent;
+}
+main .myTables .overview tbody .startingDay {
+  border: none;
+  outline: none;
+  text-align: center;
+  background: transparent;
+}
+main .myTables .overview tbody .startingDay:focus {
+  outline: none;
+}
+main .myTables .overflow {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+main .myTables .overflow thead {
+  text-align: center;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+}
+main .myTables .overflow thead th {
+  height: 2em;
+}
+main .myTables .overflow thead td {
+  width: auto;
+  text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+}
+main .myTables .income {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .income:hover {
+  box-shadow: 8px 8px 16px #61eb88;
+  transform: translateX(-5px) translateY(-5px);
+}
+main .myTables .income thead {
+  filter: brightness(95%);
+  color: #055a1d;
+  text-align: center;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+}
+main .myTables .income thead th {
+  height: 2em;
+}
+main .myTables .income thead td {
+  width: auto;
+  text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+}
+main .myTables .bills {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .bills:hover {
+  box-shadow: 8px 8px 16px #f86363;
+  transform: translateX(-5px) translateY(-5px);
+}
+main .myTables .bills thead {
+  text-align: center;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  color: #fd2d2d;
+}
+main .myTables .bills thead th {
+  height: 2em;
+}
+main .myTables .bills thead td {
+  width: auto;
+  text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+}
+main .myTables .expenses {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .expenses:hover {
+  box-shadow: 8px 8px 16px #f7995b;
+  transform: translateX(-5px) translateY(-5px);
+}
+main .myTables .expenses thead {
+  text-align: center;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+}
+main .myTables .expenses thead th {
+  height: 2em;
+}
+main .myTables .expenses thead td {
+  width: auto;
+  text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+}
+main .myTables .savings {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  transition: 0.4s ease;
+}
+main .myTables .savings:hover {
+  box-shadow: 8px 8px 16px #7c78f4;
+  transform: translateX(-5px) translateY(-5px);
+}
+main .myTables .savings thead {
+  text-align: center;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  color: #1e40ff;
+}
+main .myTables .savings thead th {
+  height: 2em;
+}
+main .myTables .savings thead td {
+  width: auto;
+  text-align: center;
+  background: linear-gradient(135deg, #f5ca85 0%, #f7ba79 50%, #f3b471 100%);
+}
+main .saveButton {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 40%;
+  background: linear-gradient(45deg, #4ebd4d, #28df25, #059c02);
+  transition: 0.5s ease;
+}
+main .saveButton:hover {
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 10px;
+  transform: translateY(-10px) translateX(-10px);
+}
+main .deleteButton {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  height: 2em;
+  width: 7em;
+  font-size: 1.1rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 55%;
+  top: -2em;
+  background: linear-gradient(to right, #ff0000, #ff6666);
+  background: linear-gradient(45deg, #a90e0e, #ff0000, #c40606);
+  transition: 0.5s ease;
+}
+main .deleteButton:hover {
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 10px;
+  transform: translateY(-10px) translateX(-10px);
+}
+main .savedStatus {
+  height: 10em;
+  width: 20em;
+  background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 12px;
+  color: navy;
+  position: absolute;
+  top: 30%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  left: 50%;
+  transform: translate(-50% -50%);
+  box-shadow: 4px 4px 12px 0 rgba(31, 38, 135, 0.37);
+}
+main .savedStatus h2 {
+  border-bottom: 1px solid gray;
+  height: 2em;
+  background: linear-gradient(135deg, #d1a458 0%, #c78a3f 50%, #cc6f26 100%);
+  filter: brightness(110%);
+  margin-top: 0px;
+  border-radius: 12px 12px 0px 0px;
+  padding-top: 20px;
+}
+main .myCharts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin-right: 0.3em;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+main .myCharts .remainder {
+  height: 15em;
+}
+main .myCharts .comparison {
+  height: 15em;
+}
+main .myCharts .analysis {
+  top: 40%;
+  position: relative;
+  height: 20em;
+}
+
+@media (max-width: 575.98px) {
+  header {
+    width: 100%;
+  }
+  header .title {
+    left: 40%;
+    font-size: 2rem;
+  }
+  header .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    height: 3em;
+    top: 7em;
+    left: 2em;
+    border-radius: 35px;
+    width: 4em;
+    background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease-in;
+  }
+  header .menu:hover {
+    cursor: pointer;
+    width: 18em;
+  }
+  header .menu:hover .cartSmall,
+  header .menu:hover .searchIconSmall,
+  header .menu:hover .toggleThemeSmall {
+    display: inline-block;
+  }
+  header .menu h2 {
+    font-size: 1.2em;
+    margin-left: 10px;
+    position: relative;
+    top: -0.2em;
+  }
+  header .menu .cartSmall {
+    height: 20px;
+    width: 20px;
+    left: 1em;
+    top: 1em;
+    position: static;
+    display: none;
+  }
+  header .menu .searchIconSmall {
+    height: 20px;
+    width: 20px;
+    position: static;
+    top: 3em;
+    display: none;
+    left: 0.7em;
+  }
+  header .menu .toggleThemeSmall {
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border: none;
+    height: 2em;
+    width: 7em;
+    font-size: 1.1rem;
+    justify-content: center;
+    outline: none;
+    align-items: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    width: 2.2em;
+    top: 4.3em;
+    margin-right: 10px;
+    padding: 2px;
+    display: none;
+    position: static;
+    font-size: 1.1em;
+  }
+  header .searchContainer {
+    height: 7em;
+  }
+  header .searchContainer .searchInputIcon {
+    left: 13%;
+    top: 3em;
+  }
+  header .searchContainer .searchInput {
+    font-size: 1em;
+    height: 3.2em;
+    top: 2em;
+  }
+  header .searchContainer .cancelInputIcon {
+    left: 80%;
+    height: 20px;
+    width: 20px;
+    top: 3em;
+  }
+  header .cartDisplay {
+    left: 50%;
+  }
+  header .cartDisplay .cartIconContainer {
+    left: -1em;
+    max-width: 19em;
+  }
+  header .cartDisplay .cartIconContainer .cancelCartIcon {
+    left: 13em;
+  }
+  header .cartDisplay .cartTableContainer .summary {
+    width: 15em;
+  }
+  header .searchIcon, header .toggleTheme, header .cart {
+    display: none;
+  }
+  .slogan {
+    font-size: 1.8rem;
+    position: relative;
+    top: 3rem;
+    display: flex;
+    max-width: 10em;
+    text-align: center;
+    left: 30%;
+  }
+  .sloganText {
+    font-size: 1.5rem;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    max-width: 10em;
+    text-align: center;
+    left: 30%;
+  }
+  .body {
+    height: 320vh;
+  }
+  main {
+    top: 2em;
+    height: 105em;
+  }
+  main nav {
+    display: grid;
+    height: 15em;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    border-radius: 12px;
+  }
+  main nav .budgeted, main nav .leftToBudget, main nav .incomeSpent, main nav .incomeLeftover, main nav .incomeSaved {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    text-align: center;
+  }
+  main nav .budgeted {
+    grid-column: 2;
+    grid-row: 1;
+    padding-right: 4em;
+    margin-left: -8em;
+  }
+  main nav .leftToBudget {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: -10em;
+  }
+  main nav .incomeSpent {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: -11em;
+  }
+  main nav .myProgress {
+    display: none;
+  }
+  main nav .incomeSaved {
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: -12em;
+  }
+  main nav .incomeLeftover {
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: -11em;
+  }
+  main .myTables {
+    width: 100% !important;
+    display: grid;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+  }
+  main .myTables .overview,
+  main .myTables .overflow,
+  main .myTables .income,
+  main .myTables .bills,
+  main .myTables .expenses,
+  main .myTables .savings {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    text-align: center;
+  }
+  main .myTables .overview thead,
+  main .myTables .overflow thead,
+  main .myTables .income thead,
+  main .myTables .bills thead,
+  main .myTables .expenses thead,
+  main .myTables .savings thead {
+    width: 100%;
+    height: 2em;
+  }
+  main .myTables .overview thead td,
+  main .myTables .overflow thead td,
+  main .myTables .income thead td,
+  main .myTables .bills thead td,
+  main .myTables .expenses thead td,
+  main .myTables .savings thead td {
+    width: 100%;
+  }
+  main .myTables table {
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+  }
+  main .myTables .overview tbody tr td .monthSelect {
+    margin-right: 0em;
+    padding: 0px;
+  }
+  main .saveButton {
+    left: 20%;
+  }
+  main .deleteButton {
+    left: 60%;
+  }
+  main .savedStatus {
+    top: 40%;
+    left: 35%;
+    height: 8em;
+    width: 15em;
+  }
+  main .myCharts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+    grid-template-columns: 17em;
+    grid-template-rows: 16em;
+    width: 100% !important;
+  }
+  main .myCharts .remainder {
+    height: 10em;
+  }
+  main .myCharts .comparison {
+    height: 10em;
+    margin-right: 0em;
+    padding: 0;
+    max-width: 100%;
+    min-width: 0;
+  }
+  main .myCharts .analysis {
+    height: 15em;
+  }
+}/*# sourceMappingURL=FinanceTrackerResponsive.css.map */
