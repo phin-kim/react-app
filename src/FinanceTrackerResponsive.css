@@ -69,6 +69,7 @@ body {
 }
 .dark .text .slogan {
   background: linear-gradient(45deg, #00df82, #03624c);
+  width: 70%;
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -431,7 +432,7 @@ header .cartDisplay .cartTableContainer .summary .deleteTableButton {
   height: 0.5em;
   width: 7em;
   position: relative;
-  left: 5em;
+  left: 9em;
   background: linear-gradient(45deg, #ff0000, #ff6666);
   transition: 0.5s ease;
 }
@@ -1235,7 +1236,7 @@ main .myCharts .analysis {
     left: 20%;
   }
   .body {
-    height: 320vh;
+    height: 315vh;
   }
   main {
     top: 2em;
@@ -1509,7 +1510,7 @@ main .myCharts .analysis {
     left: 25%;
   }
   .body {
-    height: 260vh;
+    height: 265vh;
   }
   main {
     top: 2em;
@@ -1758,7 +1759,7 @@ main .myCharts .analysis {
     left: 30%;
   }
   .body {
-    height: 270vh;
+    height: 320vh;
   }
   main {
     top: 2em;
@@ -1995,6 +1996,7 @@ main .myCharts .analysis {
     display: flex;
     max-width: 100%;
     text-align: center;
+    width: 70%;
     left: 25%;
   }
   .sloganText {
@@ -2007,7 +2009,7 @@ main .myCharts .analysis {
     left: 30%;
   }
   .body {
-    height: 270vh;
+    height: 268vh;
   }
   main {
     top: 2em;
