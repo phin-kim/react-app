@@ -1257,12 +1257,28 @@ main .myCharts .analysis {
   header .cartDisplay .cartIconContainer {
     left: -1em;
     max-width: 19em;
+    position: relative;
+  }
+  header .cartDisplay .cartIconContainer h1 {
+    font-weight: 500;
+    margin-top: -23em;
+    position: absolute;
   }
   header .cartDisplay .cartIconContainer .cancelCartIcon {
-    left: 13em;
+    left: 19em;
+    top: -14em;
+    position: absolute;
+  }
+  header .cartDisplay .cartIconContainer button {
+    position: absolute;
+    top: -10em;
+    z-index: 9;
+  }
+  header .cartDisplay .cartTableContainer {
+    top: 11em;
   }
   header .cartDisplay .cartTableContainer .summary {
-    width: 15em;
+    width: 19em;
   }
   header .searchIcon, header .toggleTheme, header .cart {
     display: none;
@@ -1290,7 +1306,7 @@ main .myCharts .analysis {
   }
   main {
     top: 2em;
-    height: 105em;
+    height: 90em;
   }
   main nav {
     display: grid;
@@ -1321,7 +1337,7 @@ main .myCharts .analysis {
   main nav .leftToBudget {
     grid-column: 1;
     grid-row: 2;
-    margin-left: -10em;
+    margin-left: -12em;
   }
   main nav .incomeSpent {
     grid-column: 2;
@@ -1334,7 +1350,7 @@ main .myCharts .analysis {
   main nav .incomeSaved {
     grid-column: 1;
     grid-row: 3;
-    margin-left: -12em;
+    margin-left: -15em;
   }
   main nav .incomeLeftover {
     grid-column: 2;
@@ -1407,7 +1423,7 @@ main .myCharts .analysis {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     margin-right: 0.3em;
-    grid-template-columns: 17em;
+    grid-template-columns: 17em 17em;
     grid-template-rows: 16em;
     width: 100% !important;
   }
@@ -1422,6 +1438,7 @@ main .myCharts .analysis {
     min-width: 0;
   }
   main .myCharts .analysis {
+    margin-top: -4em;
     height: 15em;
   }
 }
