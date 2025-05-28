@@ -1302,7 +1302,8 @@ main .myCharts .analysis {
     left: 20%;
   }
   .body {
-    height: 315vh;
+    height: 100vh;
+    overflow-x: hidden;
   }
   main {
     top: 2em;
