@@ -918,22 +918,22 @@ main .myCharts .analysis {
     font-size: 1.1em;
   }
   header .searchContainer {
-    height: 7em;
+    height: 5em;
   }
   header .searchContainer .searchInputIcon {
     left: 13%;
-    top: 3em;
+    top: 2em;
   }
   header .searchContainer .searchInput {
     font-size: 1em;
-    height: 3.2em;
-    top: 2em;
+    height: 3em;
+    top: 1em;
   }
   header .searchContainer .cancelInputIcon {
     left: 80%;
     height: 20px;
     width: 20px;
-    top: 3em;
+    top: 2em;
   }
   header .cartDisplay {
     left: 50%;
@@ -1107,5 +1107,1017 @@ main .myCharts .analysis {
   }
   main .myCharts .analysis {
     height: 15em;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header {
+    width: 100%;
+  }
+  header .title {
+    left: 40%;
+    font-size: 2rem;
+  }
+  header .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    height: 3em;
+    top: 7em;
+    left: 2em;
+    border-radius: 35px;
+    width: 18em;
+    background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease-in;
+  }
+  header .menu:hover {
+    cursor: pointer;
+  }
+  header .menu h2 {
+    font-size: 1.2em;
+    margin-left: 10px;
+    position: relative;
+    top: -0.2em;
+  }
+  header .menu .cartSmall {
+    height: 20px;
+    width: 20px;
+    left: 1em;
+    top: 1em;
+    display: inline-block;
+    position: static;
+  }
+  header .menu .searchIconSmall {
+    height: 20px;
+    width: 20px;
+    position: static;
+    top: 3em;
+    display: inline-block;
+    left: 0.7em;
+  }
+  header .menu .toggleThemeSmall {
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border: none;
+    height: 2em;
+    width: 7em;
+    font-size: 1.1rem;
+    justify-content: center;
+    outline: none;
+    align-items: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    width: 2.2em;
+    top: 4.3em;
+    margin-right: 10px;
+    padding: 2px;
+    display: inline-block;
+    position: static;
+    font-size: 1.1em;
+  }
+  header .searchContainer {
+    height: 5em;
+  }
+  header .searchContainer .searchInputIcon {
+    left: 13%;
+    top: 2em;
+  }
+  header .searchContainer .searchInput {
+    font-size: 1em;
+    height: 3em;
+    top: 1em;
+  }
+  header .searchContainer .cancelInputIcon {
+    left: 80%;
+    height: 20px;
+    width: 20px;
+    top: 2em;
+  }
+  header .cartDisplay {
+    left: 50%;
+  }
+  header .cartDisplay .cartIconContainer {
+    left: -1em;
+    max-width: 19em;
+  }
+  header .cartDisplay .cartIconContainer .cancelCartIcon {
+    left: 13em;
+  }
+  header .cartDisplay .cartTableContainer .summary {
+    width: 15em;
+  }
+  header .searchIcon, header .toggleTheme, header .cart {
+    display: none;
+  }
+  .slogan {
+    font-size: 1.8rem;
+    position: relative;
+    top: 3rem;
+    display: flex;
+    max-width: 14em;
+    text-align: center;
+    left: 20%;
+  }
+  .sloganText {
+    font-size: 1.5rem;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    max-width: 14em;
+    text-align: center;
+    left: 20%;
+  }
+  .body {
+    height: 320vh;
+  }
+  main {
+    top: 2em;
+    height: 105em;
+  }
+  main nav {
+    display: grid;
+    height: 15em;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    border-radius: 12px;
+  }
+  main nav .budgeted, main nav .leftToBudget, main nav .incomeSpent, main nav .incomeLeftover, main nav .incomeSaved {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    text-align: center;
+  }
+  main nav .budgeted {
+    grid-column: 2;
+    grid-row: 1;
+    padding-right: 4em;
+    margin-left: -8em;
+  }
+  main nav .leftToBudget {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: -10em;
+  }
+  main nav .incomeSpent {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: -11em;
+  }
+  main nav .myProgress {
+    display: none;
+  }
+  main nav .incomeSaved {
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: -12em;
+  }
+  main nav .incomeLeftover {
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: -11em;
+  }
+  main .myTables {
+    width: 100% !important;
+    display: grid;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+  }
+  main .myTables .overview,
+  main .myTables .overflow,
+  main .myTables .income,
+  main .myTables .bills,
+  main .myTables .expenses,
+  main .myTables .savings {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    text-align: center;
+  }
+  main .myTables .overview thead,
+  main .myTables .overflow thead,
+  main .myTables .income thead,
+  main .myTables .bills thead,
+  main .myTables .expenses thead,
+  main .myTables .savings thead {
+    width: 100%;
+    height: 2em;
+  }
+  main .myTables .overview thead td,
+  main .myTables .overflow thead td,
+  main .myTables .income thead td,
+  main .myTables .bills thead td,
+  main .myTables .expenses thead td,
+  main .myTables .savings thead td {
+    width: 100%;
+  }
+  main .myTables table {
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+  }
+  main .myTables .overview tbody tr td .monthSelect {
+    margin-right: 0em;
+    padding: 0px;
+  }
+  main .saveButton {
+    left: 20%;
+  }
+  main .deleteButton {
+    left: 60%;
+  }
+  main .savedStatus {
+    top: 40%;
+    left: 35%;
+    height: 8em;
+    width: 15em;
+  }
+  main .myCharts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+    grid-template-columns: 17em;
+    grid-template-rows: 16em;
+    width: 100% !important;
+  }
+  main .myCharts .remainder {
+    height: 10em;
+  }
+  main .myCharts .comparison {
+    height: 10em;
+    margin-right: 0em;
+    padding: 0;
+    max-width: 100%;
+    min-width: 0;
+  }
+  main .myCharts .analysis {
+    height: 15em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header {
+    width: 100%;
+  }
+  header .title {
+    left: 10%;
+    font-size: 2.2rem;
+  }
+  header .menu {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    height: 3em;
+    top: 7em;
+    left: 2em;
+    border-radius: 35px;
+    width: 18em;
+    background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease-in;
+  }
+  header .menu:hover {
+    cursor: pointer;
+  }
+  header .menu h2 {
+    font-size: 1.2em;
+    margin-left: 10px;
+    position: relative;
+    top: -0.2em;
+  }
+  header .menu .cartSmall {
+    height: 30px;
+    width: 30px;
+    left: 1em;
+    top: 1em;
+    display: inline-block;
+    position: absolute;
+  }
+  header .menu .searchIconSmall {
+    height: 30px;
+    width: 30px;
+    position: static;
+    top: 3em;
+    display: inline-block;
+    left: 0.7em;
+  }
+  header .menu .toggleThemeSmall {
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border: none;
+    height: 2em;
+    width: 7em;
+    font-size: 1.1rem;
+    justify-content: center;
+    outline: none;
+    align-items: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    width: 2.2em;
+    top: 4.3em;
+    margin-right: 10px;
+    padding: 2px;
+    display: inline-block;
+    position: static;
+    font-size: 1.1em;
+  }
+  header .searchContainer {
+    height: 7em;
+  }
+  header .searchContainer .searchInputIcon {
+    left: 11%;
+    top: 3em;
+  }
+  header .searchContainer .searchInput {
+    font-size: 1em;
+    height: 4em;
+    top: 1.8em;
+  }
+  header .searchContainer .cancelInputIcon {
+    left: 83%;
+    height: 20px;
+    width: 20px;
+    top: 3em;
+  }
+  header .cartDisplay {
+    left: 65%;
+  }
+  header .cartDisplay .cartIconContainer {
+    left: -1em;
+    max-width: 19em;
+  }
+  header .cartDisplay .cartIconContainer .cancelCartIcon {
+    left: 17em;
+  }
+  header .cartDisplay .cartTableContainer .summary {
+    width: 17em;
+  }
+  header .searchIcon, header .toggleTheme, header .cart {
+    display: inline-block;
+  }
+  header .searchIcon {
+    left: 2%;
+  }
+  header .cart {
+    left: -25%;
+  }
+  header .toggleTheme {
+    left: 80%;
+  }
+  .slogan {
+    font-size: 2rem;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    left: 20%;
+  }
+  .sloganText {
+    font-size: 1.8rem;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    max-width: 14em;
+    text-align: center;
+    left: 25%;
+  }
+  .body {
+    height: 260vh;
+  }
+  main {
+    top: 2em;
+    height: 85em;
+  }
+  main nav {
+    display: grid;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 1em;
+    grid-template-columns: repeat(6, 13%);
+    border-radius: 12px;
+  }
+  main nav .budgeted, main nav .leftToBudget, main nav .incomeSpent, main nav .incomeLeftover, main nav .incomeSaved {
+    position: absolute;
+    top: 2.9em;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    text-align: center;
+  }
+  main nav .myProgress {
+    display: none;
+  }
+  main .myTables {
+    width: 100% !important;
+    display: grid;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+  }
+  main .myTables .overview,
+  main .myTables .overflow,
+  main .myTables .income,
+  main .myTables .bills,
+  main .myTables .expenses,
+  main .myTables .savings {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    text-align: center;
+  }
+  main .myTables .overview thead,
+  main .myTables .overflow thead,
+  main .myTables .income thead,
+  main .myTables .bills thead,
+  main .myTables .expenses thead,
+  main .myTables .savings thead {
+    width: 100%;
+    height: 2em;
+  }
+  main .myTables .overview thead td,
+  main .myTables .overflow thead td,
+  main .myTables .income thead td,
+  main .myTables .bills thead td,
+  main .myTables .expenses thead td,
+  main .myTables .savings thead td {
+    width: 100%;
+  }
+  main .myTables table {
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+  }
+  main .myTables .overview tbody tr td .monthSelect {
+    margin-right: 0em;
+    padding: 0px;
+  }
+  main .saveButton {
+    left: 20%;
+  }
+  main .deleteButton {
+    left: 60%;
+  }
+  main .savedStatus {
+    top: 40%;
+    left: 35%;
+    height: 8em;
+    width: 15em;
+  }
+  main .myCharts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+    grid-template-columns: 1fr 1fr;
+    width: 100% !important;
+    gap: 0em;
+  }
+  main .myCharts .remainder {
+    height: 13em;
+  }
+  main .myCharts .comparison {
+    height: 13em;
+    margin-right: 0em;
+    padding-left: 0em;
+    max-width: 100%;
+    min-width: 0;
+  }
+  main .myCharts .analysis {
+    height: 17em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1190.98px) {
+  header {
+    width: 100%;
+  }
+  header .title {
+    left: 8%;
+    font-size: 2.5rem;
+  }
+  header .menu {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    height: 3em;
+    top: 7em;
+    left: 2em;
+    border-radius: 35px;
+    width: 18em;
+    background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease-in;
+  }
+  header .menu:hover {
+    cursor: pointer;
+  }
+  header .menu h2 {
+    font-size: 1.2em;
+    margin-left: 10px;
+    position: relative;
+    top: -0.2em;
+  }
+  header .menu .cartSmall {
+    height: 30px;
+    width: 30px;
+    left: 1em;
+    top: 1em;
+    display: inline-block;
+    position: absolute;
+  }
+  header .menu .searchIconSmall {
+    height: 30px;
+    width: 30px;
+    position: static;
+    top: 3em;
+    display: inline-block;
+    left: 0.7em;
+  }
+  header .menu .toggleThemeSmall {
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border: none;
+    height: 2em;
+    width: 7em;
+    font-size: 1.1rem;
+    justify-content: center;
+    outline: none;
+    align-items: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    width: 2.2em;
+    top: 4.3em;
+    margin-right: 10px;
+    padding: 2px;
+    display: inline-block;
+    position: static;
+    font-size: 1.1em;
+  }
+  header .searchContainer {
+    height: 7em;
+  }
+  header .searchContainer .searchInputIcon {
+    left: 11%;
+    top: 3em;
+  }
+  header .searchContainer .searchInput {
+    font-size: 1em;
+    height: 4em;
+    top: 1.8em;
+  }
+  header .searchContainer .cancelInputIcon {
+    left: 83%;
+    height: 20px;
+    width: 20px;
+    top: 3em;
+  }
+  header .cartDisplay {
+    left: 65%;
+  }
+  header .cartDisplay .cartIconContainer {
+    left: 0em;
+    max-width: 20em;
+  }
+  header .cartDisplay .cartIconContainer .cancelCartIcon {
+    left: 19em;
+  }
+  header .cartDisplay .cartTableContainer .summary {
+    width: 20em;
+  }
+  header .searchIcon, header .toggleTheme, header .cart {
+    display: inline-block;
+  }
+  header .searchIcon {
+    left: 16%;
+  }
+  header .cart {
+    left: -18%;
+  }
+  header .toggleTheme {
+    left: 86%;
+  }
+  .slogan {
+    font-size: 2rem;
+    position: relative;
+    top: 1.8rem;
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    left: 25%;
+  }
+  .sloganText {
+    font-size: 1.8rem;
+    position: relative;
+    top: 1.9rem;
+    display: flex;
+    max-width: 14em;
+    text-align: center;
+    left: 30%;
+  }
+  .body {
+    height: 270vh;
+  }
+  main {
+    top: 2em;
+    height: 86em;
+  }
+  main nav {
+    display: grid;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 1em;
+    grid-template-columns: repeat(6, 13%);
+    border-radius: 12px;
+  }
+  main nav .budgeted, main nav .leftToBudget, main nav .incomeSpent, main nav .incomeLeftover, main nav .incomeSaved {
+    position: absolute;
+    top: 2.9em;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    text-align: center;
+  }
+  main nav .myProgress {
+    display: none;
+  }
+  main .myTables {
+    width: 100% !important;
+    display: grid;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+  }
+  main .myTables .overview,
+  main .myTables .overflow,
+  main .myTables .income,
+  main .myTables .bills,
+  main .myTables .expenses,
+  main .myTables .savings {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    text-align: center;
+  }
+  main .myTables .overview thead,
+  main .myTables .overflow thead,
+  main .myTables .income thead,
+  main .myTables .bills thead,
+  main .myTables .expenses thead,
+  main .myTables .savings thead {
+    width: 100%;
+    height: 2em;
+  }
+  main .myTables .overview thead td,
+  main .myTables .overflow thead td,
+  main .myTables .income thead td,
+  main .myTables .bills thead td,
+  main .myTables .expenses thead td,
+  main .myTables .savings thead td {
+    width: 100%;
+  }
+  main .myTables table {
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+  }
+  main .myTables .overview tbody tr td .monthSelect {
+    margin-right: 0em;
+    padding: 0px;
+  }
+  main .saveButton {
+    left: 20%;
+  }
+  main .deleteButton {
+    left: 60%;
+  }
+  main .savedStatus {
+    top: 40%;
+    left: 35%;
+    height: 8em;
+    width: 15em;
+  }
+  main .myCharts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+    grid-template-columns: 1fr 1fr;
+    width: 100% !important;
+    gap: 0em;
+  }
+  main .myCharts .remainder {
+    height: 14em;
+  }
+  main .myCharts .comparison {
+    height: 14em;
+    margin-right: 0em;
+    padding-left: 0em;
+    max-width: 100%;
+    min-width: 0;
+  }
+  main .myCharts .analysis {
+    height: 18em;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    width: 100%;
+  }
+  header .title {
+    left: 8%;
+    font-size: 2.5rem;
+  }
+  header .menu {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    height: 3em;
+    top: 7em;
+    left: 2em;
+    border-radius: 35px;
+    width: 18em;
+    background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease-in;
+  }
+  header .menu:hover {
+    cursor: pointer;
+  }
+  header .menu h2 {
+    font-size: 1.2em;
+    margin-left: 10px;
+    position: relative;
+    top: -0.2em;
+  }
+  header .menu .cartSmall {
+    height: 30px;
+    width: 30px;
+    left: 1em;
+    top: 1em;
+    display: inline-block;
+    position: absolute;
+  }
+  header .menu .searchIconSmall {
+    height: 30px;
+    width: 30px;
+    position: static;
+    top: 3em;
+    display: inline-block;
+    left: 0.7em;
+  }
+  header .menu .toggleThemeSmall {
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border: none;
+    height: 2em;
+    width: 7em;
+    font-size: 1.1rem;
+    justify-content: center;
+    outline: none;
+    align-items: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    width: 2.2em;
+    top: 4.3em;
+    margin-right: 10px;
+    padding: 2px;
+    display: inline-block;
+    position: static;
+    font-size: 1.1em;
+  }
+  header .searchContainer {
+    height: 7em;
+  }
+  header .searchContainer .searchInputIcon {
+    left: 11%;
+    top: 3em;
+  }
+  header .searchContainer .searchInput {
+    font-size: 1em;
+    height: 4em;
+    top: 1.8em;
+  }
+  header .searchContainer .cancelInputIcon {
+    left: 83%;
+    height: 20px;
+    width: 20px;
+    top: 3em;
+  }
+  header .cartDisplay {
+    left: 70%;
+  }
+  header .cartDisplay .cartIconContainer {
+    left: 0em;
+    max-width: 20em;
+  }
+  header .cartDisplay .cartIconContainer .cancelCartIcon {
+    left: 19em;
+  }
+  header .cartDisplay .cartTableContainer .summary {
+    width: 22em;
+  }
+  header .searchIcon, header .toggleTheme, header .cart {
+    display: inline-block;
+  }
+  header .searchIcon {
+    left: 16%;
+  }
+  header .cart {
+    left: -18%;
+  }
+  header .toggleTheme {
+    left: 86%;
+  }
+  .slogan {
+    font-size: 2rem;
+    position: relative;
+    top: 1.8rem;
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    left: 25%;
+  }
+  .sloganText {
+    font-size: 1.8rem;
+    position: relative;
+    top: 1.9rem;
+    display: flex;
+    max-width: 14em;
+    text-align: center;
+    left: 30%;
+  }
+  .body {
+    height: 270vh;
+  }
+  main {
+    top: 2em;
+    height: 86em;
+  }
+  main nav {
+    display: grid;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 1em;
+    grid-template-columns: repeat(6, 13%);
+    border-radius: 12px;
+  }
+  main nav .budgeted, main nav .leftToBudget, main nav .incomeSpent, main nav .incomeLeftover, main nav .incomeSaved {
+    position: absolute;
+    top: 2.9em;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    text-align: center;
+  }
+  main nav .myProgress {
+    display: none;
+  }
+  main .myTables {
+    width: 100% !important;
+    display: grid;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+  }
+  main .myTables .overview,
+  main .myTables .overflow,
+  main .myTables .income,
+  main .myTables .bills,
+  main .myTables .expenses,
+  main .myTables .savings {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    text-align: center;
+  }
+  main .myTables .overview thead,
+  main .myTables .overflow thead,
+  main .myTables .income thead,
+  main .myTables .bills thead,
+  main .myTables .expenses thead,
+  main .myTables .savings thead {
+    width: 100%;
+    height: 2em;
+  }
+  main .myTables .overview thead td,
+  main .myTables .overflow thead td,
+  main .myTables .income thead td,
+  main .myTables .bills thead td,
+  main .myTables .expenses thead td,
+  main .myTables .savings thead td {
+    width: 100%;
+  }
+  main .myTables table {
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+  }
+  main .myTables .overview tbody tr td .monthSelect {
+    margin-right: 0em;
+    padding: 0px;
+  }
+  main .saveButton {
+    left: 20%;
+  }
+  main .deleteButton {
+    left: 60%;
+  }
+  main .savedStatus {
+    top: 40%;
+    left: 35%;
+    height: 8em;
+    width: 15em;
+  }
+  main .myCharts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-right: 0.3em;
+    grid-template-columns: 1fr 1fr;
+    width: 100% !important;
+    gap: 0em;
+  }
+  main .myCharts .remainder {
+    height: 14em;
+  }
+  main .myCharts .comparison {
+    height: 14em;
+    margin-right: 0em;
+    padding-left: 0em;
+    max-width: 100%;
+    min-width: 0;
+  }
+  main .myCharts .analysis {
+    height: 18em;
   }
 }/*# sourceMappingURL=FinanceTrackerResponsive.css.map */

@@ -8,3 +8,7 @@
 !src/main.jsx
 !vite.config.js
 !package.json
+!src/firebase.js
+!src/FinanceTrackerResponsive.css
+!src/tables.jsx
+!src/charts.jsx

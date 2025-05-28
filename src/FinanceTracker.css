@@ -431,7 +431,7 @@ header .cartDisplay .cartTableContainer .summary .deleteTableButton {
   height: 0.5em;
   width: 7em;
   position: relative;
-  left: 5em;
+  left: 9em;
   background: linear-gradient(45deg, #ff0000, #ff6666);
   transition: 0.5s ease;
 }
