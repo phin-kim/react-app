@@ -39,7 +39,7 @@ function MyTables({
                                 ref={monthSelect} 
                                 value={selectedMonth}
                                 onChange={handleMonthSelect}>
-                                <option value="">Select a month</option>
+                                <option value=""> Month</option>
                                 {
                                     months.map((month,i)=>(
                                         <option value={month} key={i}>{month}</option>
@@ -109,7 +109,7 @@ function MyTables({
                         <th colSpan={3}>INCOME</th>
                     </tr>
                     <tr>
-                        <td>Description</td>
+                        <td>Name</td>
                         <td>Budget</td>
                         <td>Actual</td>
                     </tr>
@@ -136,7 +136,7 @@ function MyTables({
                                 />
                         </td>
                         <td><input 
-                                type="text"
+                                type="number"
                                 placeholder="Actual"
                                 style={inputStyles}
                                 name="incomeActual"
@@ -154,7 +154,7 @@ function MyTables({
                         <th colSpan={3}>BILLS</th>
                     </tr>
                     <tr>
-                        <td>Description</td>
+                        <td>Name</td>
                         <td>Budget</td>
                         <td>Actual</td>
                     </tr>
@@ -202,7 +202,7 @@ function MyTables({
                         <th colSpan={3}>EXPENSES</th>
                     </tr>
                     <tr>
-                        <td>Description</td>
+                        <td>Name</td>
                         <td>Budget</td>
                         <td>Actual</td>
                     </tr>
@@ -250,7 +250,7 @@ function MyTables({
                         <th colSpan={3}>SAVINGS</th>
                     </tr>
                     <tr>
-                        <td>Description</td>
+                        <td>Name</td>
                         <td>Budget</td>
                         <td>Actual</td>
                     </tr>

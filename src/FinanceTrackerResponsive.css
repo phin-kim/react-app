@@ -844,7 +844,7 @@ main .myCharts .analysis {
     width: 100%;
   }
   header .title {
-    left: 40%;
+    left: 30%;
     font-size: 2rem;
   }
   header .menu {
@@ -854,9 +854,10 @@ main .myCharts .analysis {
     align-items: center;
     justify-items: center;
     position: absolute;
-    height: 3em;
+    height: 2em;
     top: 7em;
     left: 2em;
+    padding-bottom: 12px;
     border-radius: 35px;
     width: 4em;
     background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
@@ -883,6 +884,7 @@ main .myCharts .analysis {
     width: 20px;
     left: 1em;
     top: 1em;
+    margin-bottom: 10px;
     position: static;
     display: none;
   }
@@ -890,6 +892,7 @@ main .myCharts .analysis {
     height: 20px;
     width: 20px;
     position: static;
+    margin-bottom: 10px;
     top: 3em;
     display: none;
     left: 0.7em;
@@ -915,26 +918,28 @@ main .myCharts .analysis {
     margin-right: 10px;
     padding: 2px;
     display: none;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
     position: static;
     font-size: 1.1em;
   }
   header .searchContainer {
-    height: 5em;
+    height: 7em;
   }
   header .searchContainer .searchInputIcon {
     left: 13%;
-    top: 2em;
+    top: 3.7em;
   }
   header .searchContainer .searchInput {
     font-size: 1em;
     height: 3em;
-    top: 1em;
+    top: 3em;
   }
   header .searchContainer .cancelInputIcon {
     left: 80%;
     height: 20px;
     width: 20px;
-    top: 2em;
+    top: 3.7em;
   }
   header .cartDisplay {
     left: 50%;
@@ -942,39 +947,63 @@ main .myCharts .analysis {
   header .cartDisplay .cartIconContainer {
     left: -1em;
     max-width: 19em;
+    position: relative;
+  }
+  header .cartDisplay .cartIconContainer h1 {
+    font-size: 1.2em;
+    top: 7em;
+    font-weight: 500;
+    margin-left: -12em;
+  }
+  header .cartDisplay .cartIconContainer button {
+    font-size: 0.9em;
+    height: 3em;
+    padding-bottom: 19px;
+    left: 2em;
+    top: 9em;
+    width: 7em;
   }
   header .cartDisplay .cartIconContainer .cancelCartIcon {
-    left: 13em;
+    left: 6em;
+    top: 0.5em;
   }
   header .cartDisplay .cartTableContainer .summary {
-    width: 15em;
+    width: 7em;
+    font-size: 0.7em;
+  }
+  header .cartDisplay .cartTableContainer .summary .deleteTableButton {
+    left: 3.5em;
+    width: 5em;
+    font-size: 0.9em;
   }
   header .searchIcon, header .toggleTheme, header .cart {
     display: none;
   }
   .slogan {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     position: relative;
     top: 3rem;
     display: flex;
     max-width: 10em;
     text-align: center;
-    left: 30%;
+    left: 13%;
   }
   .sloganText {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     position: relative;
     top: 2rem;
     display: flex;
     max-width: 10em;
     text-align: center;
-    left: 30%;
+    left: 15%;
   }
   .body {
-    height: 320vh;
+    height: 270vh;
+    overflow-x: hidden;
   }
   main {
     top: 2em;
+    border: none;
     height: 105em;
   }
   main nav {
@@ -982,7 +1011,7 @@ main .myCharts .analysis {
     height: 15em;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 83%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 1em;
@@ -995,23 +1024,27 @@ main .myCharts .analysis {
     align-items: center;
     top: auto;
     left: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.7em;
     text-align: center;
   }
   main nav .budgeted {
     grid-column: 2;
     grid-row: 1;
     padding-right: 4em;
-    margin-left: -8em;
+    margin-left: -2em;
   }
   main nav .leftToBudget {
     grid-column: 1;
     grid-row: 2;
-    margin-left: -10em;
+    margin-left: -7em;
   }
   main nav .incomeSpent {
     grid-column: 2;
     grid-row: 2;
-    margin-left: -11em;
+    margin-left: -8em;
   }
   main nav .myProgress {
     display: none;
@@ -1019,12 +1052,12 @@ main .myCharts .analysis {
   main nav .incomeSaved {
     grid-column: 1;
     grid-row: 3;
-    margin-left: -12em;
+    margin-left: -8em;
   }
   main nav .incomeLeftover {
     grid-column: 2;
     grid-row: 3;
-    margin-left: -11em;
+    margin-left: -8em;
   }
   main .myTables {
     width: 100% !important;
@@ -1047,6 +1080,7 @@ main .myCharts .analysis {
     box-sizing: border-box;
     margin-left: 0em !important;
     margin-right: 0em !important;
+    font-size: 0.7em;
     text-align: center;
   }
   main .myTables .overview thead,
@@ -1073,19 +1107,35 @@ main .myCharts .analysis {
   }
   main .myTables .overview tbody tr td .monthSelect {
     margin-right: 0em;
-    padding: 0px;
+    padding-left: 6px;
+    font-size: 0.8em;
+  }
+  main .myTables .overview tbody tr td select {
+    font-size: 0.8em;
+  }
+  main .myTables .income tbody tr input,
+  main .myTables .bills tbody tr input,
+  main .myTables .expenses tbody tr input,
+  main .myTables .savings tbody tr input {
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   main .saveButton {
-    left: 20%;
+    left: 5%;
   }
   main .deleteButton {
     left: 60%;
   }
   main .savedStatus {
-    top: 40%;
-    left: 35%;
-    height: 8em;
-    width: 15em;
+    top: 30%;
+    left: 37%;
+    height: 6em;
+    width: 13em;
+  }
+  main .savedStatus h2 {
+    font-size: 1em;
   }
   main .myCharts {
     display: grid;
