@@ -16,6 +16,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "animejs": "^4.0.2",
     "chart.js": "^4.4.9",
     "firebase": "^11.8.0",
     "react": "^19.1.0",

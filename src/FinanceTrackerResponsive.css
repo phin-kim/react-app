@@ -45,6 +45,16 @@ body {
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 40px rgb(3, 246, 145);
 }
+.dark .menu {
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 50%, #03624c 100%);
+}
+.dark .menu h2 {
+  background: linear-gradient(45deg, #00df82, #03624c);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0px 40px rgba(1, 252, 147, 0.655);
+}
 .dark .cartDisplay {
   background: linear-gradient(135deg, #030f0f 0%, #024e3b 30%, #03624c 60%, #024e3b 80%, #030f0f 100%);
   color: lightgray;
@@ -68,8 +78,8 @@ body {
   color: lightgray;
 }
 .dark .text .slogan {
-  background: linear-gradient(45deg, #00df82, #03624c);
   width: 70%;
+  background: linear-gradient(45deg, #00df82, #03624c);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1807,6 +1817,7 @@ main .myCharts .analysis {
   }
   header .toggleTheme {
     left: 86%;
+    padding-bottom: 28px;
   }
   .slogan {
     font-size: 2rem;
@@ -2056,6 +2067,7 @@ main .myCharts .analysis {
   }
   header .toggleTheme {
     left: 86%;
+    padding-bottom: 32px;
   }
   .slogan {
     font-size: 2rem;
@@ -2088,7 +2100,7 @@ main .myCharts .analysis {
     height: 5em;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 80%;
     gap: 1em;
     grid-template-columns: repeat(6, 13%);
     border-radius: 12px;
@@ -2163,10 +2175,10 @@ main .myCharts .analysis {
     left: 60%;
   }
   main .savedStatus {
-    top: 40%;
+    top: 30%;
     left: 35%;
-    height: 8em;
-    width: 15em;
+    height: 10em;
+    width: 17em;
   }
   main .myCharts {
     display: grid;

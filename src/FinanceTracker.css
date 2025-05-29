@@ -45,6 +45,16 @@ body {
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 40px rgb(3, 246, 145);
 }
+.dark .menu {
+  background: linear-gradient(135deg, #030f0f 0%, #024e3b 50%, #03624c 100%);
+}
+.dark .menu h2 {
+  background: linear-gradient(45deg, #00df82, #03624c);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0px 40px rgba(1, 252, 147, 0.655);
+}
 .dark .cartDisplay {
   background: linear-gradient(135deg, #030f0f 0%, #024e3b 30%, #03624c 60%, #024e3b 80%, #030f0f 100%);
   color: lightgray;
@@ -68,8 +78,8 @@ body {
   color: lightgray;
 }
 .dark .text .slogan {
-  background: linear-gradient(45deg, #00df82, #03624c);
   width: 70%;
+  background: linear-gradient(45deg, #00df82, #03624c);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;

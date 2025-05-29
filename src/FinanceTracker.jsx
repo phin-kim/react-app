@@ -2,6 +2,7 @@ import React,{useState,useEffect, useRef,} from "react";
 import MyCharts from "./charts";
 import MyTables from "./tables";
 import { db }  from "./firebase";
+
 import { collection, addDoc, getDocs,deleteDoc,doc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
 function FinanceTracker({isDark,onToggleTheme,...props}){
@@ -225,6 +226,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
         }
     }
     
+    
     //OTHER VARIABLES
     const months =[
         "January", "February", "March", "April", "May", "June",
@@ -234,11 +236,16 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
         outline:"none",
         border:"none",
     }
-    
+    const boxStyles = {
+        width: 100,
+        height: 100,
+        background: "#fdca77",
+        margin: "2em"
+    }
     return(
         <div className= {`body ${isDark ? "dark" : ""}`}> 
         <header >
-            <h1 className="title">Money Map</h1>
+            <h1 className="title">  Money Map</h1>
             <div className="menu">
                 <h2>Menu</h2>
                 <img className="searchIconSmall" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
@@ -329,6 +336,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
         </header>
 
         <hr />
+        
         <section className="text">
             <h2 className={`slogan ${isDark && "dark"}`}>Keep your money on a short leash</h2>
             <p className={`sloganText ${isDark && "dark"}`}>Track every coin. Grow every goal</p>
