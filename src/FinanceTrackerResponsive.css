@@ -275,7 +275,10 @@ header .searchContainer .searchInput {
   padding-left: 3em;
 }
 header .searchContainer .searchInput:focus {
-  outline: none;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  -o-border-image: linear-gradient(135deg, #affd77, #ff8c42) 1;
+     border-image: linear-gradient(135deg, #affd77, #ff8c42) 1;
 }
 header .searchContainer .searchInput::-moz-placeholder {
   color: #c0bfbf;
@@ -2055,6 +2058,9 @@ main .myCharts .analysis {
   }
   header .cartDisplay .cartTableContainer .summary {
     width: 22em;
+  }
+  header .cartDisplay .cartTableContainer .summary .deleteTableButton {
+    left: 7em;
   }
   header .searchIcon, header .toggleTheme, header .cart {
     display: inline-block;

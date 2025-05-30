@@ -103,7 +103,10 @@ function MyTables({
                     </tr>
                 </tbody>
             </table>
-            <table className="income" border={1}>
+            <table 
+                className="income" border={1}
+            >
+                
                 <thead>
                     <tr>
                         <th colSpan={3}>INCOME</th>
@@ -148,7 +151,9 @@ function MyTables({
                     ))}
                 </tbody>
             </table>
-            <table className="bills" border="1">
+            <table
+                className="bills" border="1"
+            >
                 <thead>
                     <tr>
                         <th colSpan={3}>BILLS</th>
@@ -196,6 +201,7 @@ function MyTables({
                     ))}
                 </tbody>
             </table>
+            
             <table className="expenses" border="1">
                 <thead>
                     <tr>

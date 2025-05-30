@@ -2,9 +2,10 @@ import React,{useState,useEffect, useRef,} from "react";
 import MyCharts from "./charts";
 import MyTables from "./tables";
 import { db }  from "./firebase";
-
+import Animation from "./animationTest";
 import { collection, addDoc, getDocs,deleteDoc,doc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
+
 function FinanceTracker({isDark,onToggleTheme,...props}){
     //USE STATES
     const [searchDisplayed,setSearchDisplayed] = useState(false);
@@ -236,12 +237,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
         outline:"none",
         border:"none",
     }
-    const boxStyles = {
-        width: 100,
-        height: 100,
-        background: "#fdca77",
-        margin: "2em"
-    }
+    
     return(
         <div className= {`body ${isDark ? "dark" : ""}`}> 
         <header >
@@ -250,9 +246,16 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
                 <h2>Menu</h2>
                 <img className="searchIconSmall" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
                 <img className="cartSmall" src="../src/assets/shopping.png" alt="shopping cart icon" onClick={handleCartDisplay} />
-                <button className={`toggleThemeSmall`} onClick={onToggleTheme}>{isDark ? "dark" : "light"}</button>
+                <button className={`toggleThemeSmall`} onClick={onToggleTheme}>{isDark ? "Dark" : "Light"}</button>
             </div>
-            <button className={`toggleTheme`} onClick={onToggleTheme}>{isDark ? "dark" : "light"}</button>
+            <button 
+                
+                className={`toggleTheme`} 
+                onClick={onToggleTheme}>
+                
+                {isDark ? "Dark Mode" : "Light Mode"}
+                
+            </button>
             <img className="searchIcon" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
             {searchDisplayed 
             &&(
@@ -268,7 +271,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
                 <div className={`cartDisplay `} ref={cartRef}>
                     <div className="cartIconContainer">
                         <h1>History</h1>
-                        <img className="cancelCartIcon" src="../src/assets/cancel.png" alt="" onClick={()=>setCartDisplay(false)}/>
+                        <img className="cancelCartIcon" src="../src/assets/cross2.png" alt="" onClick={()=>setCartDisplay(false)}/>
                         <button onClick={fetchData}>Load Data</button>
                     </div>
                         {/*allSavedData.length === 0 ? (<h2>Your cart is empty</h2>):(<h2></h2>)*/}
@@ -373,7 +376,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
                 incomeLeft={incomeLeft}
                 incomeSpent={incomeSpent}
                 savingsActualNav={savingsActual}
-                                />
+            />
             <button className="saveButton" type="button" onClick={handleDetailSave}>Save</button>
             <button className="deleteButton" onClick={handleDelete} type="button">Delete</button>
             {savedStatus && 
@@ -393,7 +396,10 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
                 incomeSpent={incomeSpent}
                 isDark={isDark}
             />
+
         </main>
+        <Animation />
+
         </div>
     );
 }
