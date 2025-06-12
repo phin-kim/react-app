@@ -249,12 +249,9 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
                 <button className={`toggleThemeSmall`} onClick={onToggleTheme}>{isDark ? "Dark" : "Light"}</button>
             </div>
             <button 
-                
                 className={`toggleTheme`} 
                 onClick={onToggleTheme}>
-                
                 {isDark ? "Dark Mode" : "Light Mode"}
-                
             </button>
             <img className="searchIcon" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
             {searchDisplayed 
@@ -398,7 +395,6 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
             />
 
         </main>
-        <Animation />
 
         </div>
     );

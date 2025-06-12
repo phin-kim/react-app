@@ -1,0 +1,269 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.weatherApp {
+  border-radius: 30px;
+  min-height: 42em;
+  min-width: 100%;
+}
+.weatherApp.dark {
+  background: linear-gradient(to bottom, #8b00d7, #4b0099, #120047);
+  color: #e6dada;
+}
+.weatherApp.light {
+  background: linear-gradient(to right, #f9e9c5, #f1d48d, #e7bb74);
+  color: #120047;
+}
+.weatherApp .headerSection {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(59, 5, 207, 0.6862745098), #21145b);
+  min-height: 7em;
+  border-radius: 30px 30px 0px 0px;
+}
+.weatherApp .headerSection.dark {
+  background: linear-gradient(to bottom, rgba(59, 5, 207, 0.6862745098), #21145b);
+  color: #e6dada;
+}
+.weatherApp .headerSection.light {
+  background: linear-gradient(to bottom, #bc9b77, #8e6c4f, #8d6345);
+  color: #120047;
+}
+.weatherApp .headerSection .searchLocation {
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  top: 2em;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  height: 3.5em;
+  width: 18em;
+  left: 2em;
+  outline: none;
+  color: #e6dada;
+  padding-left: 8px;
+}
+.weatherApp .headerSection .searchLocation:focus {
+  outline: none;
+}
+.weatherApp .headerSection .searchLocation::-webkit-search-cancel-button {
+  filter: invert(1);
+  height: 24px;
+  z-index: 3;
+  background-position: center;
+  transform: scale(1.3);
+  margin-right: 40px;
+}
+.weatherApp .headerSection .searchIcon {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 2.5em;
+  left: 14.8em;
+}
+.weatherApp .headerSection .currentLocation {
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  top: 2em;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  left: 18em;
+  height: 46px;
+  width: 15em;
+  padding-left: 12px;
+}
+.weatherApp .headerSection .currentLocation .locationName {
+  position: relative;
+  top: -2em;
+}
+.weatherApp .headerSection .currentLocation .locationTemperature {
+  position: relative;
+  top: -2em;
+  left: 1em;
+}
+.weatherApp .headerSection .currentLocation .topWeatherIcon {
+  position: relative;
+  top: -0.5em;
+  left: 2em;
+  height: 60px;
+  width: 60px;
+}
+.weatherApp .headerSection .toggleTheme {
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  top: 2em;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  height: 46px;
+  width: 8em;
+  right: 12em;
+  padding-left: 12px;
+}
+.weatherApp .headerSection .unitConverter {
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  top: 2em;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  right: 5em;
+  height: 46px;
+  width: 4em;
+  padding-left: 12px;
+}
+.weatherApp .headerSection .unitConverter .temperatureAdjust {
+  height: 5em;
+  width: 10em;
+  justify-content: center;
+  align-content: center;
+  border-radius: 12px;
+  position: absolute;
+  padding-left: 12px;
+  left: -6em;
+  top: 3.5em;
+}
+.weatherApp .headerSection .unitConverter .temperatureAdjust.dark {
+  background: navy;
+}
+.weatherApp .headerSection .unitConverter .temperatureAdjust.light {
+  background: #8d6345;
+}
+.weatherApp .weatherDisplay {
+  display: flex;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  height: 18em;
+  width: 50%;
+  border-radius: 12px;
+  left: 10%;
+  margin-top: 4%;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+.weatherApp .weatherDisplay .weather {
+  font-size: 1.5em;
+  position: absolute;
+}
+.weatherApp .weatherDisplay .currentTime {
+  position: absolute;
+  top: 3em;
+}
+.weatherApp .weatherDisplay .currentWeatherImage {
+  position: absolute;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  top: 4em;
+  left: 0.3em;
+}
+.weatherApp .weatherDisplay .currentTemperature {
+  font-size: 3.9rem;
+  position: absolute;
+  top: 1.6em;
+  left: 2.4em;
+}
+.weatherApp .weatherDisplay .currentTemperature .temperatureUnit {
+  font-size: 2rem;
+  position: absolute;
+  top: 0.5em;
+}
+.weatherApp .weatherDisplay .weatherStatus {
+  position: absolute;
+  top: 5em;
+  left: 48%;
+  font-size: 1.2em;
+}
+.weatherApp .weatherDisplay .estimatedWeather {
+  position: absolute;
+  top: 9em;
+  left: 48%;
+}
+.weatherApp .weatherDisplay .weatherStatement {
+  position: absolute;
+  top: 60%;
+}
+.weatherApp .weatherDisplay .weatherCondition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 68%;
+  left: -2em;
+  padding-left: 30px;
+  min-width: 90%;
+  max-height: 30%;
+}
+.weatherApp .weatherDisplay .weatherCondition .wind {
+  position: absolute;
+  top: 4em;
+  left: 5%;
+}
+.weatherApp .weatherDisplay .weatherCondition .humidity {
+  position: absolute;
+  top: 4em;
+  left: 30%;
+}
+.weatherApp .weatherDisplay .weatherCondition .visibility {
+  position: absolute;
+  top: 4em;
+  left: 60%;
+}
+.weatherApp .weatherDisplay .weatherCondition .pressure {
+  position: absolute;
+  top: 4em;
+  left: 89%;
+}
+.weatherApp footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.3em;
+  position: relative;
+  left: -10%;
+}
+.weatherApp footer .futurePredictions {
+  width: 8em;
+  height: 8em;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  align-items: center;
+  margin-right: 2em;
+}
+.weatherApp footer .futurePredictions .predictionTemperature {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+}
+.weatherApp footer .futurePredictions .day {
+  position: absolute;
+  left: 60%;
+  padding-top: 0.5em;
+}
+.weatherApp footer .futurePredictions .date {
+  position: absolute;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+}
+.weatherApp footer .futurePredictions .weatherPredictionIcon {
+  position: absolute;
+  top: 40%;
+  left: 1em;
+}/*# sourceMappingURL=weather.css.map */
