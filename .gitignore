@@ -1,0 +1,17 @@
+*
+!.gitignore
+!src/
+!src/FinanceTracker.jsx
+!src/FinanceTracker.css
+!src/App.jsx
+!src/index.html
+!src/main.jsx
+!vite.config.js
+!package.json
+!src/firebase.js
+!src/FinanceTrackerResponsive.css
+!src/tables.jsx
+!src/charts.jsx
+!src/assests
+!src/Learn2.jsx
+!src/weather.css 
