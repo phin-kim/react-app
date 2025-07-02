@@ -1,5 +1,4 @@
 //import MyComponent from"./Learn.jsx"
-//import WeatherApp from "./Learn2.jsx";
 import FinanceTracker from "./FinanceTracker";
 import Animation from "./animationTest";
 import React,{useState} from "react";
@@ -11,7 +10,6 @@ function App() {
   return(
     <>
       <FinanceTracker isDark = {isDark} onToggleTheme = {handleDarkMode}/>
-      {/*<WeatherApp/>*/}
     </>
   );
   

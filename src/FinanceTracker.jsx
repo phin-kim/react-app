@@ -110,15 +110,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
         });
         return()=> observer.disconnect();
     },[allSavedData])
-    /*useEffect(()=>{
-        const anyFieldFilled = Object.values(allRows).some(row=>Object.values(row).some(value=>value !==""&& value !== null &&value !== undefined));
-        if(anyFieldFilled){
-            const timeout = setTimeout(() => {
-            calculateBudgetTotals();
-            },2000 );
-            return ()=>clearTimeout(timeout);
-        }
-    },[allRows.overflow])*/
+   
     //FUNCTIONS
     function handleSearchDisplay(){
         setSearchDisplayed(p=>!p);
@@ -130,17 +122,7 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
         setSelectedMonth(monthSelect.current.value);
     }
     
-    /*  function handleOverflowRows(index,column,value){
-        const newRows = [...overflowRows];
-        newRows[index][column] = value;
-        setOverflowRows(newRows);
-        const isLastRow= index === overflowRows.length - 1;
-        const isAnyFieldFIlled = Object.values(newRows[index]).some(val=>val!=="");
-        if(isAnyFieldFIlled && isLastRow){
-            setOverflowRows([...newRows,{col1:"",col2:"",col3:""}])
-        }
-    }
-    */
+   
     function handleRowChange(rowType,index,column, value){
         const newData = [...allRows[rowType]];
         newData[index][column] =value;
