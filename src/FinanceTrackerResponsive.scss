@@ -1,0 +1,1316 @@
+@import './FinanceTracker.scss';
+//MOBILE PHONE STYLES
+@media (max-width: 575.98px){
+    header{
+        width: 100%;
+        .title{
+            left: 30%;
+            font-size:2rem;
+        }
+        .menu{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            position: absolute;
+            height: 2em;
+            top: 7em;
+            left: 2em;
+            padding-bottom: 12px;
+            border-radius: 35px;
+            width: 4em;
+            background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition:  0.4s  ease-in;
+            &:hover{
+                cursor: pointer;
+                width: 18em;
+                .cartSmall,
+                .searchIconSmall,
+                .toggleThemeSmall{
+                    display: inline-block;
+                }
+            }
+            h2{
+                font-size: 1.2em;
+                margin-left: 10px;
+                position: $rel;
+                top: -0.2em;
+            }
+            .cartSmall{
+                height: 20px;
+                width: 20px;
+                left: 1em;
+                top: 1em;
+                margin-bottom: 10px;
+                
+                position: static;
+                display: none;
+            }
+            .searchIconSmall{
+                height: 20px;
+                width: 20px;
+                position: static;
+                margin-bottom: 10px;
+
+                top: 3em;
+                display: none;
+                left: 0.7em;
+            }
+            
+            .toggleThemeSmall{
+                @include buttonStyles;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                width: 2.2em;
+                top: 4.3em;
+                margin-right: 10px;
+                padding: 2px;
+                display: none;
+                padding-bottom: 5px;
+                margin-bottom: 10px;
+                position: static;
+                font-size: 1.1em;
+            }
+        }
+        .searchContainer{
+            height: 7em;
+            .searchInputIcon{
+                left: 13%;
+                top: 3.7em;
+            }
+            .searchInput{
+                font-size: 1em;
+                height: 3em;
+                top: 3em;
+            }
+            .cancelInputIcon{
+                left: 80%;
+                height: 20px;
+                width: 20px;
+                top: 3.7em;
+            }
+        }
+        .cartDisplay{
+            left: 50%;
+            .cartIconContainer{
+                left: -1em;
+                max-width: 19em;
+                position: $rel;
+                //top: 2em;
+                h1{
+                    font-size: 1.2em;
+                    top:7em ;
+                    font-weight: 500;
+                    margin-left: -12em;
+                }
+                button{
+                    font-size: 0.9em;
+                    height: 3em;
+                    padding-bottom: 19px;
+                    left: 2em;
+                    top: 9em;
+                    width: 7em;
+                }
+                .cancelCartIcon{
+                    left: 6em;
+                    top: 0.5em;
+                }
+            }
+            .cartTableContainer{
+                .summary{
+                    width: 7em;
+                    font-size: 0.7em;
+                    .deleteTableButton{
+                        left: 3.5em;
+                        width: 5em;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+        .searchIcon,.toggleTheme,.cart{
+            display: none;
+        }
+    }
+    .slogan{
+        font-size: 1.7rem;
+        position: $rel;
+        top: 3rem;
+        display: $dis;
+        max-width: 10em;
+        text-align: center;
+        left: 13%;
+    }
+    .sloganText{
+        font-size: 1.4rem;
+        position: $rel;
+        top: 2rem;
+        display: $dis;
+        max-width: 10em;
+        text-align: center;
+        left: 15%;
+    }
+    .body{
+        height: 270vh;
+        overflow-x: hidden;
+
+    }
+    main{
+        top: 2em;
+        border: none;
+        height:105em ;
+        nav{
+            display: grid;
+            height: 15em;
+            justify-content: center;
+            align-items: center;
+            width: 83%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1em;
+            border-radius: 12px;
+            .budgeted,.leftToBudget,.incomeSpent,.incomeLeftover,.incomeSaved{
+            position: static;
+            display: $dis;
+            justify-content: center;
+            align-items: center;
+            top: auto;
+            left: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 0.7em;
+            text-align: center;
+            }
+            .budgeted{
+                grid-column: 2;
+                grid-row: 1;
+                padding-right:4em ;
+                margin-left: -2em;
+            }
+            .leftToBudget{
+                grid-column:1 ;
+                grid-row:2 ;
+                margin-left: -7em;
+            }
+            .incomeSpent{
+                grid-column:2 ;
+                grid-row:2 ;
+                margin-left: -8em;
+            }
+            .myProgress{
+                display: none;
+            }
+            .incomeSaved{
+                grid-column:1 ;
+                grid-row:3 ;
+                margin-left: -8em;
+            }
+            .incomeLeftover{
+                grid-column:2 ;
+                grid-row:3 ;
+                margin-left: -8em;
+            }
+        }
+        .myTables{
+            width: 100% !important;
+            display: grid;
+            gap: 1em;
+            @include gridStyles;
+            .overview,
+            .overflow,
+            .income,
+            .bills,
+            .expenses,
+            .savings{
+                width: 100% !important;
+                min-width: 0;
+                max-width: 100%;
+                box-sizing: border-box;
+                margin-left: 0em !important;
+                margin-right: 0em !important;
+                font-size: 0.7em;
+                
+                text-align: center;
+                thead{
+                        width: 100%;
+                        height:2em ;
+                    td{
+                        width: 100%;
+                    }
+                }
+            }
+            table{
+                width: 100% ;
+                text-align: center;
+                table-layout: fixed;
+            }
+            .overview{
+                tbody{
+                    tr{
+                        td{
+                            .monthSelect{
+                                margin-right: 0em;
+                                padding-left: 6px;
+                                font-size: 0.8em;
+                            }
+                        }
+                    }
+                    tr{
+                        td{
+                            select{
+                                font-size: 0.8em;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            .income,
+            .bills,
+            .expenses,
+            .savings{
+                tbody{
+                    tr{
+                        input{
+                            font-size: 0.9em;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+        .saveButton{
+            left: 5%;
+        }
+        .deleteButton{
+            left: 60%;
+        }
+        .savedStatus{
+            top: 30%;
+            left: 37%;
+            height: 6em;
+            width: 13em;
+            h2{
+                font-size: 1em
+            }
+        }
+        .myCharts{
+            @include gridStyles;
+            grid-template-columns: 17em ;
+            grid-template-rows: 16em;
+            width: 100% !important;
+            .remainder{
+                height: 10em;
+            }
+            .comparison{
+                height: 10em;
+                margin-right: 0em;
+                padding: 0;
+                max-width: 100%;
+                min-width: 0;
+            }
+            .analysis{
+                height: 15em;
+                
+            }
+        }
+    }
+}
+//LANDSCAPE PHONES
+@media (min-width: 576px) and (max-width: 767.98px){
+    header{
+        width: 100%;
+        .title{
+            left: 40%;
+            font-size:2rem;
+        }
+        .menu{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            position: absolute;
+            height: 3em;
+            top: 7em;
+            left: 2em;
+            border-radius: 35px;
+            width: 18em;
+            background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition:  0.4s  ease-in;
+            &:hover{
+                cursor: pointer;
+                
+            }
+            
+            h2{
+                font-size: 1.2em;
+                margin-left: 10px;
+                position: $rel;
+                top: -0.2em;
+            }
+            .cartSmall{
+                height: 20px;
+                width: 20px;
+                left: 1em;
+                top: 1em;
+                display: inline-block;
+                position: static;
+            }
+            .searchIconSmall{
+                height: 20px;
+                width: 20px;
+                position: static;
+                top: 3em;
+                display: inline-block;
+                left: 0.7em;
+            }
+            
+            .toggleThemeSmall{
+                @include buttonStyles;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                width: 2.2em;
+                top: 4.3em;
+                margin-right: 10px;
+                padding: 2px;
+                display: inline-block;
+                position: static;
+                font-size: 1.1em;
+            }
+        }
+        .searchContainer{
+            height: 5em;
+            .searchInputIcon{
+                left: 13%;
+                top: 2em;
+            }
+            .searchInput{
+                font-size: 1em;
+                height: 3em;
+                top: 1em;
+            }
+            .cancelInputIcon{
+                left: 80%;
+                height: 20px;
+                width: 20px;
+                top: 2em;
+            }
+        }
+        .cartDisplay{
+            left: 50%;
+            .cartIconContainer{
+                left: -1em;
+                max-width: 19em;
+                position: $rel;
+                //top: 2em;
+                h1{
+                    font-weight: 500;
+                    margin-top: -23em;
+                    position: $abs;
+                    
+                }
+                .cancelCartIcon{
+                    left: 19em;
+                    top: -14em;
+                    position: $abs;
+                }
+                button{
+                    position: $abs;
+                    top: -10em;
+                    z-index: 9;
+                }
+            }
+            .cartTableContainer{
+                    top: 11em;
+
+                .summary{
+                    width: 19em;
+                    //top: -2em;
+                }
+            }
+        }
+        .searchIcon,.toggleTheme,.cart{
+            display: none;
+        }
+    }
+    .slogan{
+        font-size: 1.8rem;
+        position: $rel;
+        top: 3rem;
+        display: $dis;
+        max-width: 14em;
+        text-align: center;
+        left: 20%;
+    }
+    .sloganText{
+        font-size: 1.5rem;
+        position: $rel;
+        top: 2rem;
+        display: $dis;
+        max-width: 14em;
+        text-align: center;
+        left: 20%;
+    }
+    .body{
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    main{
+        top: 2em;
+        height:90em ;
+        nav{
+            display: grid;
+            height: 15em;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1em;
+            border-radius: 12px;
+            .budgeted,.leftToBudget,.incomeSpent,.incomeLeftover,.incomeSaved{
+            position: static;
+            display: $dis;
+            justify-content: center;
+            align-items: center;
+            top: auto;
+            left: auto;
+            text-align: center;
+            }
+            .budgeted{
+                grid-column: 2;
+                grid-row: 1;
+                padding-right:4em ;
+                margin-left: -8em;
+            }
+            .leftToBudget{
+                grid-column:1 ;
+                grid-row:2 ;
+                margin-left: -12em;
+            }
+            .incomeSpent{
+                grid-column:2 ;
+                grid-row:2 ;
+                margin-left: -11em;
+            }
+            .myProgress{
+                display: none;
+            }
+            .incomeSaved{
+                grid-column:1 ;
+                grid-row:3 ;
+                margin-left: -15em;
+            }
+            .incomeLeftover{
+                grid-column:2 ;
+                grid-row:3 ;
+                margin-left: -11em;
+            }
+        }
+        .myTables{
+            width: 100% !important;
+            display: grid;
+            gap: 1em;
+            @include gridStyles;
+            .overview,
+            .overflow,
+            .income,
+            .bills,
+            .expenses,
+            .savings{
+                width: 100% !important;
+                min-width: 0;
+                max-width: 100%;
+                box-sizing: border-box;
+                margin-left: 0em !important;
+                margin-right: 0em !important;
+                text-align: center;
+                thead{
+                        width: 100%;
+                        height:2em ;
+                    td{
+                        width: 100%;
+                    }
+                }
+            }
+            table{
+                width: 100% ;
+                text-align: center;
+                table-layout: fixed;
+            }
+            .overview{
+                tbody{
+                    tr{
+                        td{
+                            .monthSelect{
+                                margin-right: 0em;
+                                padding: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .saveButton{
+            left: 20%;
+        }
+        .deleteButton{
+            left: 60%;
+        }
+        .savedStatus{
+            top: 40%;
+            left: 35%;
+            height: 8em;
+            width: 15em;
+        }
+        .myCharts{
+            @include gridStyles;
+            grid-template-columns: 17em 17em ;
+            grid-template-rows: 16em;
+            width: 100% !important;
+            .remainder{
+                height: 10em;
+            }
+            .comparison{
+                height: 10em;
+                margin-right: 0em;
+                padding: 0;
+                max-width: 100%;
+                min-width: 0;
+            }
+            .analysis{
+                margin-top: -4em;
+                height: 15em;
+                
+            }
+        }
+    }
+}
+//TABLETS
+@media (min-width: 768px) and (max-width: 991.98px){
+    header{
+        width: 100%;
+        .title{
+            left: 10%;
+            font-size:2.2rem;
+        }
+        .menu{
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            position: absolute;
+            height: 3em;
+            top: 7em;
+            left: 2em;
+            border-radius: 35px;
+            width: 18em;
+            background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition:  0.4s  ease-in;
+            &:hover{
+                cursor: pointer;
+                
+            }
+            
+            h2{
+                font-size: 1.2em;
+                margin-left: 10px;
+                position: $rel;
+                top: -0.2em;
+            }
+            .cartSmall{
+                height: 30px;
+                width: 30px;
+                left: 1em;
+                top: 1em;
+                display: inline-block;
+                position: $abs;
+            }
+            .searchIconSmall{
+                height: 30px;
+                width: 30px;
+                position: static;
+                top: 3em;
+                display: inline-block;
+                left: 0.7em;
+            }
+            
+            .toggleThemeSmall{
+                @include buttonStyles;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                width: 2.2em;
+                top: 4.3em;
+                margin-right: 10px;
+                padding: 2px;
+                display: inline-block;
+                position: static;
+                font-size: 1.1em;
+            }
+        }
+        .searchContainer{
+            height: 7em;
+            .searchInputIcon{
+                left: 11%;
+                top: 3em;
+            }
+            .searchInput{
+                font-size: 1em;
+                height: 4em;
+                top: 1.8em;
+            }
+            .cancelInputIcon{
+                left: 83%;
+                height: 20px;
+                width: 20px;
+                top: 3em;
+            }
+        }
+        .cartDisplay{
+            left: 65%;
+            .cartIconContainer{
+                left: -1em;
+                max-width: 19em;
+                .cancelCartIcon{
+                    left: 17em;
+                }
+            }
+            .cartTableContainer{
+                .summary{
+                    width: 17em;
+                }
+            }
+        }
+        .searchIcon,.toggleTheme,.cart{
+            display: inline-block;
+        }
+        .searchIcon{
+            left: 2%;
+        }
+        .cart{
+            left: -25%;
+        }
+        .toggleTheme{
+            left: 80%;
+        }
+    }
+    .slogan{
+        font-size: 2rem;
+        position: $rel;
+        top: 2rem;
+        display: $dis;
+        max-width: 100%;
+        text-align: center;
+        left: 20%;
+    }
+    .sloganText{
+        font-size: 1.8rem;
+        position: $rel;
+        top: 2rem;
+        display: $dis;
+        max-width: 14em;
+        text-align: center;
+        left: 25%;
+    }
+    .body{
+        height: 265vh;
+    }
+    main{
+        top: 2em;
+        height:85em ;
+        
+        nav{
+            display: grid;
+            height: 5em;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            gap: 1em;
+            grid-template-columns: repeat(6,13%);
+
+            border-radius: 12px;
+            .budgeted,.leftToBudget,.incomeSpent,.incomeLeftover,.incomeSaved{
+                @include navStyles;
+                //position: static;
+                display: $dis;
+                justify-content: center;
+                align-items: center;
+                top: auto;
+                left: auto;
+                text-align: center;
+            }
+            .myProgress{
+                display: none;
+            }
+        }
+        .myTables{
+            width: 100% !important;
+            display: grid;
+            gap: 1em;
+            @include gridStyles;
+            .overview,
+            .overflow,
+            .income,
+            .bills,
+            .expenses,
+            .savings{
+                width: 100% !important;
+                min-width: 0;
+                max-width: 100%;
+                box-sizing: border-box;
+                margin-left: 0em !important;
+                margin-right: 0em !important;
+                text-align: center;
+                thead{
+                        width: 100%;
+                        height:2em ;
+                    td{
+                        width: 100%;
+                    }
+                }
+            }
+            table{
+                width: 100% ;
+                text-align: center;
+                table-layout: fixed;
+            }
+            .overview{
+                tbody{
+                    tr{
+                        td{
+                            .monthSelect{
+                                margin-right: 0em;
+                                padding: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .saveButton{
+            left: 20%;
+        }
+        .deleteButton{
+            left: 60%;
+        }
+        .savedStatus{
+            top: 40%;
+            left: 35%;
+            height: 8em;
+            width: 15em;
+        }
+        .myCharts{
+            @include gridStyles;
+            grid-template-columns: 1fr 1fr ;
+            width: 100% !important;
+            gap: 0em;
+            .remainder{
+                height: 13em;
+            }
+            .comparison{
+                height: 13em;
+                margin-right: 0em;
+                padding-left: 0em;
+                
+                max-width: 100%;
+                min-width: 0;
+            }
+            .analysis{
+                height: 17em;
+                
+            }
+        }
+    }
+}
+//DESKTOPS
+@media (min-width: 992px) and (max-width:1190.98px){
+    header{
+        width: 100%;
+        .title{
+            left: 8%;
+            font-size:2.5rem;
+        }
+        .menu{
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            position: absolute;
+            height: 3em;
+            top: 7em;
+            left: 2em;
+            border-radius: 35px;
+            width: 18em;
+            background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition:  0.4s  ease-in;
+            &:hover{
+                cursor: pointer;
+                
+            }
+            
+            h2{
+                font-size: 1.2em;
+                margin-left: 10px;
+                position: $rel;
+                top: -0.2em;
+            }
+            .cartSmall{
+                height: 30px;
+                width: 30px;
+                left: 1em;
+                top: 1em;
+                display: inline-block;
+                position: $abs;
+            }
+            .searchIconSmall{
+                height: 30px;
+                width: 30px;
+                position: static;
+                top: 3em;
+                display: inline-block;
+                left: 0.7em;
+            }
+            
+            .toggleThemeSmall{
+                @include buttonStyles;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                width: 2.2em;
+                top: 4.3em;
+                margin-right: 10px;
+                padding: 2px;
+                display: inline-block;
+                position: static;
+                font-size: 1.1em;
+            }
+        }
+        .searchContainer{
+            height: 7em;
+            .searchInputIcon{
+                left: 11%;
+                top: 3em;
+            }
+            .searchInput{
+                font-size: 1em;
+                height: 4em;
+                top: 1.8em;
+            }
+            .cancelInputIcon{
+                left: 83%;
+                height: 20px;
+                width: 20px;
+                top: 3em;
+            }
+        }
+        .cartDisplay{
+            left: 65%;
+            .cartIconContainer{
+                left: 0em;
+                max-width: 20em;
+                .cancelCartIcon{
+                    left: 19em;
+                }
+            }
+            .cartTableContainer{
+                .summary{
+                    width: 20em;
+                }
+            }
+        }
+        .searchIcon,.toggleTheme,.cart{
+            display: inline-block;
+        }
+        .searchIcon{
+            left: 16%;
+        }
+        .cart{
+            left: -18%;
+        }
+        .toggleTheme{
+            left: 86%;
+            padding-bottom: 28px;
+            
+        }
+    }
+    .slogan{
+        font-size: 2rem;
+        position: $rel;
+        top: 1.8rem;
+        display: $dis;
+        max-width: 100%;
+        text-align: center;
+        left: 25%;
+    }
+    .sloganText{
+        font-size: 1.8rem;
+        position: $rel;
+        top: 1.9rem;
+        display: $dis;
+        max-width: 14em;
+        text-align: center;
+        left: 30%;
+    }
+    .body{
+        height: 320vh;
+    }
+    main{
+        top: 2em;
+        height:86em ;
+        nav{
+            display: grid;
+            height: 5em;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            gap: 1em;
+            grid-template-columns: repeat(6,13%);
+
+            border-radius: 12px;
+            .budgeted,.leftToBudget,.incomeSpent,.incomeLeftover,.incomeSaved{
+                @include navStyles;
+                //position: static;
+                display: $dis;
+                justify-content: center;
+                align-items: center;
+                top: auto;
+                left: auto;
+                text-align: center;
+            }
+            .myProgress{
+                display: none;
+            }
+        }
+        .myTables{
+            width: 100% !important;
+            display: grid;
+            gap: 1em;
+            @include gridStyles;
+            .overview,
+            .overflow,
+            .income,
+            .bills,
+            .expenses,
+            .savings{
+                width: 100% !important;
+                min-width: 0;
+                max-width: 100%;
+                box-sizing: border-box;
+                margin-left: 0em !important;
+                margin-right: 0em !important;
+                text-align: center;
+                thead{
+                        width: 100%;
+                        height:2em ;
+                    td{
+                        width: 100%;
+                    }
+                }
+            }
+            table{
+                width: 100% ;
+                text-align: center;
+                table-layout: fixed;
+            }
+            .overview{
+                tbody{
+                    tr{
+                        td{
+                            .monthSelect{
+                                margin-right: 0em;
+                                padding: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .saveButton{
+            left: 20%;
+        }
+        .deleteButton{
+            left: 60%;
+        }
+        .savedStatus{
+            top: 40%;
+            left: 35%;
+            height: 8em;
+            width: 15em;
+        }
+        .myCharts{
+            @include gridStyles;
+            grid-template-columns: 1fr 1fr ;
+            width: 100% !important;
+            gap: 0em;
+            .remainder{
+                height: 14em;
+            }
+            .comparison{
+                height: 14em;
+                margin-right: 0em;
+                padding-left: 0em;
+                
+                max-width: 100%;
+                min-width: 0;
+            }
+            .analysis{
+                height: 18em;
+                
+            }
+        }
+    }
+}
+//LARGER
+@media (min-width:1200px){
+    
+    header{
+        width: 100%;
+        .title{
+            left: 8%;
+            font-size:2.5rem;
+        }
+        .menu{
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            position: absolute;
+            height: 3em;
+            top: 7em;
+            left: 2em;
+            border-radius: 35px;
+            width: 18em;
+            background: linear-gradient(135deg, #fdca77 0%, #fcae5d 50%, #ff8c42 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition:  0.4s  ease-in;
+            &:hover{
+                cursor: pointer;
+                
+            }
+            
+            h2{
+                font-size: 1.2em;
+                margin-left: 10px;
+                position: $rel;
+                top: -0.2em;
+            }
+            .cartSmall{
+                height: 30px;
+                width: 30px;
+                left: 1em;
+                top: 1em;
+                display: inline-block;
+                position: $abs;
+            }
+            .searchIconSmall{
+                height: 30px;
+                width: 30px;
+                position: static;
+                top: 3em;
+                display: inline-block;
+                left: 0.7em;
+            }
+            
+            .toggleThemeSmall{
+                @include buttonStyles;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                width: 2.2em;
+                top: 4.3em;
+                margin-right: 10px;
+                padding: 2px;
+                display: inline-block;
+                position: static;
+                font-size: 1.1em;
+            }
+        }
+        .searchContainer{
+            height: 7em;
+            .searchInputIcon{
+                left: 11%;
+                top: 3em;
+            }
+            .searchInput{
+                font-size: 1em;
+                height: 4em;
+                top: 1.8em;
+            }
+            .cancelInputIcon{
+                left: 83%;
+                height: 20px;
+                width: 20px;
+                top: 3em;
+            }
+        }
+        .cartDisplay{
+            left: 70%;
+            .cartIconContainer{
+                left: 0em;
+                max-width: 20em;
+                .cancelCartIcon{
+                    left: 19em;
+                }
+            }
+            .cartTableContainer{
+                .summary{
+                    width: 22em;
+                    .deleteTableButton{
+                        left:7em ;
+                    }
+                }
+            }
+        }
+        .searchIcon,.toggleTheme,.cart{
+            display: inline-block;
+        }
+        .searchIcon{
+            left: 16%;
+        }
+        .cart{
+            left: -18%;
+        }
+        .toggleTheme{
+            left: 86%;
+            padding-bottom: 32px;
+        }
+    }
+    .slogan{
+        font-size: 2rem;
+        position: $rel;
+        top: 1.8rem;
+        display: $dis;
+        max-width: 100%;
+        text-align: center;
+        width: 70%;
+
+        left: 25%;
+    }
+    .sloganText{
+        font-size: 1.8rem;
+        position: $rel;
+        top: 1.9rem;
+        display: $dis;
+        max-width: 14em;
+        text-align: center;
+        left: 30%;
+    }
+    .body{
+        height: 268vh;
+    }
+    main{
+        top: 2em;
+        height:86em ;
+        nav{
+            display: grid;
+            height: 5em;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            gap: 1em;
+            grid-template-columns: repeat(6,13%);
+            border-radius: 12px;
+            
+            .budgeted,.leftToBudget,.incomeSpent,.incomeLeftover,.incomeSaved{
+                @include navStyles;
+                //position: static;
+                display: $dis;
+                justify-content: center;
+                align-items: center;
+                top: auto;
+                left: auto;
+                text-align: center;
+            }
+            .myProgress{
+                display: none;
+            }
+        }
+        .myTables{
+            width: 100% !important;
+            display: grid;
+            gap: 1em;
+            @include gridStyles;
+            .overview,
+            .overflow,
+            .income,
+            .bills,
+            .expenses,
+            .savings{
+                width: 100% !important;
+                min-width: 0;
+                max-width: 100%;
+                box-sizing: border-box;
+                margin-left: 0em !important;
+                margin-right: 0em !important;
+                text-align: center;
+                thead{
+                        width: 100%;
+                        height:2em ;
+                    td{
+                        width: 100%;
+                    }
+                }
+            }
+            table{
+                width: 100% ;
+                text-align: center;
+                table-layout: fixed;
+            }
+            .overview{
+                tbody{
+                    tr{
+                        td{
+                            .monthSelect{
+                                margin-right: 0em;
+                                padding: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .saveButton{
+            left: 20%;
+        }
+        .deleteButton{
+            left: 60%;
+        }
+        .savedStatus{
+            top: 30%;
+            left: 35%;
+            height: 10em;
+            width: 17em;
+        }
+        .myCharts{
+            @include gridStyles;
+            grid-template-columns: 1fr 1fr ;
+            width: 100% !important;
+            gap: 0em;
+            .remainder{
+                height: 14em;
+            }
+            .comparison{
+                height: 14em;
+                margin-right: 0em;
+                padding-left: 0em;
+                
+                max-width: 100%;
+                min-width: 0;
+            }
+            .analysis{
+                height: 18em;
+                
+            }
+        }
+    }
+}

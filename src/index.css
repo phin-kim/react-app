@@ -1,0 +1,26 @@
+/*body{
+  background-image: url("../src/assets/Celestial.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+.clockContainer{
+  backdrop-filter: blur(5px);
+  position: relative;
+  top: 40%;
+}
+.clock{
+  color: purple;
+  font-size: 10rem;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 4px 4px 6px red;
+  text-align: center;
+
+}*/
