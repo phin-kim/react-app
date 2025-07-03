@@ -16,3 +16,7 @@
 !src/Learn2.jsx
 !src/weather.css 
 !dist/
+!.firebaserc/
+!firebse.json/
+!pglite-debug.log/
+!.github/
