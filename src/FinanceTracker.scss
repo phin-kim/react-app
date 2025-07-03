@@ -409,12 +409,12 @@ header{
     }
     .cartDisplay{
         min-height: 174vh;
-        background: linear-gradient(135deg,
+        /*background: linear-gradient(135deg,
         #f5660d 20%, 
         #fa9d08 40%, 
         #ffab51 60%, 
         #f6ad5e 80%,
-        #ff8c42 100%);
+        #ff8c42 100%);*/
         border-radius:0px 0px  0px 20px;
         position: $abs;
         float: right;
@@ -473,8 +473,8 @@ header{
                 
             }
             .cancelCartIcon{
-                height: 20px;
-                width: 20px;
+                height: 30px;
+                width: 30px;
                 position: $abs;
                 top: 1.5em;
                 left: 20em;

@@ -3,6 +3,8 @@ import MyCharts from "./charts";
 import MyTables from "./tables";
 import { db }  from "./firebase";
 import Animation from "./animationTest";
+import { FaSearch, FaShoppingCart } from 'react-icons/fa';
+import { MdClose,MdOutlineSearch, MdOutlineShoppingCart } from 'react-icons/md';
 import { collection, addDoc, getDocs,deleteDoc,doc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
 
@@ -226,8 +228,8 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
             <h1 className="title">  Money Map</h1>
             <div className="menu">
                 <h2>Menu</h2>
-                <img className="searchIconSmall" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
-                <img className="cartSmall" src="../src/assets/shopping.png" alt="shopping cart icon" onClick={handleCartDisplay} />
+                <MdOutlineSearch size={40} className="searchIconSmall" onClick={handleSearchDisplay} />
+                <MdOutlineShoppingCart  size={40} className="cartSmall"  onClick={handleCartDisplay} />
                 <button className={`toggleThemeSmall`} onClick={onToggleTheme}>{isDark ? "Dark" : "Light"}</button>
             </div>
             <button 
@@ -235,22 +237,22 @@ function FinanceTracker({isDark,onToggleTheme,...props}){
                 onClick={onToggleTheme}>
                 {isDark ? "Dark Mode" : "Light Mode"}
             </button>
-            <img className="searchIcon" src="../src/assets/search.png" alt="search icon"onClick={handleSearchDisplay} />
+            <MdOutlineSearch size={40} className="searchIcon" onClick={handleSearchDisplay} />
             {searchDisplayed 
             &&(
             <div className={`searchContainer `} ref={searchRef}  >
-                <img className="searchInputIcon" src="../src/assets/search.png" alt="search icon" />
+                <MdOutlineSearch size={40} className="searchInputIcon" />
                 <input className="searchInput" type="search" placeholder="Search"  />
-                <img className="cancelInputIcon" src="../src/assets/cancel.png" alt="" />
+                <MdClose size={40}  className="cancelInputIcon" src="../src/assets/cancel.png" alt="" />
             </div>
             )}
             
-            <img className="cart" src="../src/assets/shopping.png" alt="shopping cart icon" onClick={handleCartDisplay} />
+            <MdOutlineShoppingCart size={40} className="cart"  onClick={handleCartDisplay} />
             {cartDisplayed &&(
                 <div className={`cartDisplay `} ref={cartRef}>
                     <div className="cartIconContainer">
                         <h1>History</h1>
-                        <img className="cancelCartIcon" src="../src/assets/cross2.png" alt="" onClick={()=>setCartDisplay(false)}/>
+                        <MdClose size={40} className="cancelCartIcon" onClick={()=>setCartDisplay(false)}/>
                         <button onClick={fetchData}>Load Data</button>
                     </div>
                         {/*allSavedData.length === 0 ? (<h2>Your cart is empty</h2>):(<h2></h2>)*/}
